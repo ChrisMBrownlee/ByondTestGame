@@ -1,20 +1,22 @@
+Level 1-10 Explorer
+
 STR BASED
-Warrior > 
-        > 
+Warrior > Berserker [2H]
+        > Sentinel [Sw/Sh]
 
 INT BASED
-Mage > 
-     > 
+Mage > Fire/Poison [Dots]
+     > Ice/Lightning [AOE/Instant]
 
 LUK BASED
-Thief > 
-      > 
+Thief > Dagger [Melee DPS/DOT]
+      > Throwing Star [Ranged]
 
 DEX BASED
-Ranger > 
-       > 
+Ranger > Bowman [AtkSpeed]
+       > Crossbowman [Slower/More Powerful]
 
 CHA? BASED
-Cleric > 
-       > 
+Healer > Cleric [Instant Heals, More Potent]
+       > Witch [AOE Heals and Poisons]
 
