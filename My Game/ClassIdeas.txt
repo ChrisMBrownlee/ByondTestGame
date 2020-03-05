@@ -1,0 +1,20 @@
+STR BASED
+Warrior > 
+        > 
+
+INT BASED
+Mage > 
+     > 
+
+LUK BASED
+Thief > 
+      > 
+
+DEX BASED
+Ranger > 
+       > 
+
+CHA? BASED
+Cleric > 
+       > 
+
