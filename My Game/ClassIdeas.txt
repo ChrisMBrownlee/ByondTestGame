@@ -1,11 +1,10 @@
-[STATS]
-[BASE STATS]
+[MAIN STATS]
 - HP
-- MANA
+- ENERGY { Mana, Rage, Stamina }
 - DEF
 - AGILITY
 
-[CORE]
+[CORE STATS]
 - STR {Strength}
 - INT {Intelegence}
 - LUK {Luck}
