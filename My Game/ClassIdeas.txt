@@ -33,10 +33,11 @@
 [CLASS] Healer
 [STAT] Fth Based
 
-[Level 40]
+[Level 30]
 [PREREQ] Warrior
 [2ND JOB] > Berserker [2H]
           > Sentinel [SW/SH]
+
 [PREREQ] Mage
 [2ND JOB] > Fire/Poison [DOTs]
           > Ice/Lightning [AOE/Instants]
