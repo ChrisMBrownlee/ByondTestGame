@@ -1,22 +1,59 @@
-Level 1-10 Explorer
+[STATS]
+[BASE STATS]
+- HP
+- MANA
+- DEF
+- AGILITY
 
-STR BASED
-Warrior > Berserker [2H]
-        > Sentinel [Sw/Sh]
+[CORE]
+- STR {Strength}
+- INT {Intelegence}
+- LUK {Luck}
+- CHA {Charisma}
+- DEX {Dexterity}
+- CON {Constitution}
+- FTH {Faith}
 
-INT BASED
-Mage > Fire/Poison [Dots]
-     > Ice/Lightning [AOE/Instant]
+[CLASS TREE]
+[Level 1] 
+[CLASS] Explorer
 
-LUK BASED
-Thief > Dagger [Melee DPS/DOT]
-      > Throwing Star [Ranged]
+[Level 10]
+[CLASS] Warrior
+[STAT] Str Based
 
-DEX BASED
-Ranger > Bowman [AtkSpeed]
-       > Crossbowman [Slower/More Powerful]
+[CLASS] Mage
+[STAT] Int Based
 
-CHA? BASED
-Healer > Cleric [Instant Heals, More Potent]
-       > Witch [AOE Heals and Poisons]
+[CLASS] Thief
+[STAT] Luk Based
 
+[CLASS] Ranger
+[STAT] Dex Based
+
+[CLASS] Healer
+[STAT] Fth Based
+
+[Level 40]
+[PREREQ] Warrior
+[2ND JOB] > Berserker [2H]
+          > Sentinel [SW/SH]
+[PREREQ] Mage
+[2ND JOB] > Fire/Poison [DOTs]
+          > Ice/Lightning [AOE/Instants]
+          
+[PREREQ] Thief
+[2ND JOB] > Dagger [MELEE DPS/DOT]
+          > Throwing Star [RANGED]
+          
+[PREREQ] Ranger
+[2ND JOB] > Bowman [ATK SPEED]
+          > Crossbowman [SLOWER/MORE POWERFUL]
+          
+[PREREQ] Healer
+[2ND JOB] > Cleric [INSTANT HEALS/MORE POTENT]
+          > Witch [AOE HEALS/POISONS]
+
+//ADD LATER
+[LEVEL ##]
+[ADDITIONAL CLASSES]
