@@ -14,3 +14,5 @@ world
 
 //MOB SETTINGS
 	mob = /mob/Player/
+
+//MONSTERS

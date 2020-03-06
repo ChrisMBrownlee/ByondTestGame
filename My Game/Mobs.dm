@@ -9,9 +9,11 @@ mob/Player
 	icon = 'Player.dmi'
 //ON LOGIN
 	Login()
-		world << "Welcome to The World, [usr]."
-		loc = locate(/turf/start)
+		world << "[src] has joined the world."
+		src.loc = locate(/turf/start)
 		..()
+	Logout()
+		world << "[src] has left the world."
 //PLAYER VERBS
 	verb
 		Smile()
@@ -24,3 +26,11 @@ mob/Player
 			world << "[usr] says, [msg]"
 //MOVEMENT SPEED
 	step_size = 8
+
+//mob/aggroslime
+//	icon = 'aggroslime.dmi'
+//	icon_state = 'madboi'
+
+mob/aggroslime
+	icon = 'aggroslime.dmi'
+
