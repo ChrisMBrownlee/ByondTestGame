@@ -1,4 +1,8 @@
-//VARIABLES FILE
+//-----------------------------------------------------
+					//VARIABLES FILE//
+//-----------------------------------------------------
+
+//TODO: I THINK EVENTUALLY THIS SHOULD BE DEFAULT VARIABLES
 mob
 	var
 		HP = 80

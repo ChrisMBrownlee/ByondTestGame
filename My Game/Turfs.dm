@@ -1,34 +1,70 @@
-/* TURF INFORMATION */
+//-----------------------------------------------------
+					//TURF FILE//
+//-----------------------------------------------------
 
-//STARTING LOCATION FOR PLAYERS
-turf/start
-	name = "Spawn Spot"
-	icon = 'Start.dmi'
-	icon_state = "start"
+turf
 
-//STANDARD TURFS
-//GRASS - NORMAL
-turf/floors/grass
-	name = "Grass"
-	icon = 'Floors.dmi'
-	icon_state = "grass"
-//SAND - NORMAL
-turf/floors/sand
-	name = "Sand"
-	icon = 'Floors.dmi'
-	icon_state = "sand"
+//-----------------------------------------------------
+					//STARTING LOCATION//
+//-----------------------------------------------------
 
-//DENSE TURFS
-//STONE WALL
-turf/walls/wall
-	name = "Stone Wall"
-	icon = 'Walls.dmi'
-	icon_state = "stonewall"
-	density = 1
-	opacity = 1
+	Start
+		name = "Spawn Spot"
+		icon = 'Start.dmi'
+		icon_state = "start"
 
-//TRAP TURFS
-turf/trap/quicksand
-	name = "Sand"
-	icon = 'Traps.dmi'
-	icon_state = "quicksand"
+//-----------------------------------------------------
+					//FLOORS//
+//-----------------------------------------------------
+
+	Floors
+
+//-----------------------------------------------------
+					//GRASS//
+//-----------------------------------------------------
+		Grass
+			name = "Grass"
+			icon = 'Floors.dmi'
+			icon_state = "grass"
+
+//-----------------------------------------------------
+					//SAND//
+//-----------------------------------------------------
+
+		Sand
+			name = "Sand"
+			icon = 'Floors.dmi'
+			icon_state = "sand"
+
+//-----------------------------------------------------
+					//TRAPS//
+//-----------------------------------------------------
+
+	Traps
+
+//-----------------------------------------------------
+					//QUICKSAND//
+//-----------------------------------------------------
+
+		Quicksand
+			name = "Sand"
+			icon = 'Traps.dmi'
+			icon_state = "quicksand"
+
+//-----------------------------------------------------
+					//WALLS//
+//-----------------------------------------------------
+
+	Walls
+
+//-----------------------------------------------------
+					//STONE WALL//
+//-----------------------------------------------------
+
+		StoneWall
+			name = "Stone Wall"
+			icon = 'Walls.dmi'
+			icon_state = "stonewall"
+			density = 1
+			opacity = 1
+

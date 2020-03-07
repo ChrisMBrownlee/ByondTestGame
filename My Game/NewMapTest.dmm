@@ -1,11 +1,12 @@
-"a" = (/turf/floors/grass,/area)
-"b" = (/turf/walls/wall,/area)
-"c" = (/turf/floors/grass,/turf/start,/area)
-"d" = (/turf/floors/sand,/area)
-"e" = (/turf/floors/sand,/turf/trap/quicksand,/area)
-"f" = (/turf/trap/quicksand,/area)
-"g" = (/obj/ExplorerSword,/turf/floors/grass,/area)
-"h" = (/mob/NPC/Monster/slime/RedSlime,/turf/floors/grass,/area)
+"a" = (/turf/Floors/Grass,/area)
+"b" = (/turf/Walls/StoneWall,/area)
+"c" = (/turf/Floors/Grass,/turf/Start,/area)
+"d" = (/turf/Floors/Sand,/area)
+"e" = (/turf/Floors/Sand,/turf/Traps/Quicksand,/area)
+"f" = (/turf/Traps/Quicksand,/area)
+"g" = (/obj/ExplorerSword,/turf/Floors/Grass,/area)
+"h" = (/mob/NPC/Monster/Slime/RedSlime,/turf/Floors/Grass,/area)
+"i" = (/mob/NPC/Monster/Slime/BlueSlime,/turf/Floors/Grass,/area)
 
 (1,1,1) = {"
 dddddddddddddddddddddddddddddddddddddddddddddddddd
@@ -36,17 +37,17 @@ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaahaaaaaaiaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaiaaaaiaahaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+bbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+baaaaaaaaaaaaaaaaaaaaaaaaaiaaiaaaaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
