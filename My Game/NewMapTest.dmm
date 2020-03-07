@@ -5,7 +5,7 @@
 "e" = (/turf/floors/sand,/turf/trap/quicksand,/area)
 "f" = (/turf/trap/quicksand,/area)
 "g" = (/obj/ExplorerSword,/turf/floors/grass,/area)
-"h" = (/mob/AggroSlime,/turf/floors/grass,/area)
+"h" = (/mob/NPC/Monster/slime/RedSlime,/turf/floors/grass,/area)
 
 (1,1,1) = {"
 dddddddddddddddddddddddddddddddddddddddddddddddddd
