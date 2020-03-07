@@ -17,12 +17,15 @@ mob
 	verb
 		Smile()
 			world << "[usr] smiles."
+
 		Laugh()
 			world << "[usr] laughs."
+
 		Cry()
 			world << "[usr] cries \his heart out."
+
 		Say(msg as text)
-			world << "[usr] says, [msg]"
+			world << "[usr]: [msg]"
 
 //-----------------------------------------------------
 					//NEW VERBS//

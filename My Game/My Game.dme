@@ -13,6 +13,7 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
+#include "fonts.css"
 #include "Admin.dm"
 #include "Mobs.dm"
 #include "Monsters.dm"

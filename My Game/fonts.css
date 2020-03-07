@@ -1,0 +1,36 @@
+/* Global Styles */
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: #fff;
+}
+body {
+    background: #151515;
+    font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.2;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {color: #06f; font-family: Georgia, Verdana, sans-serif;}
+
+img {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+img.icon {
+    width: 16px;
+    height: 16px;
+}
+a {color: #06f;}
+a:visited {color: #ff00ff;}
+a.popt {text-decoration: none;}
+
+.saytext {
+	color: red;
+	background-color: black;
+	font: consolas;
+}
