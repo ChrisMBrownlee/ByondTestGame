@@ -27,10 +27,5 @@ mob/Player
 //MOVEMENT SPEED
 	step_size = 8
 
-//mob/aggroslime
-//	icon = 'aggroslime.dmi'
-//	icon_state = 'madboi'
 
-mob/aggroslime
-	icon = 'aggroslime.dmi'
 

@@ -2,28 +2,33 @@
 
 //STARTING LOCATION FOR PLAYERS
 turf/start
+	name = "Spawn Spot"
 	icon = 'Start.dmi'
 	icon_state = "start"
 
 //STANDARD TURFS
 //GRASS - NORMAL
 turf/floors/grass
-	icon = 'Grass.dmi'
+	name = "Grass"
+	icon = 'Floors.dmi'
 	icon_state = "grass"
 //SAND - NORMAL
 turf/floors/sand
-	icon = 'Sand.dmi'
+	name = "Sand"
+	icon = 'Floors.dmi'
 	icon_state = "sand"
 
 //DENSE TURFS
 //STONE WALL
 turf/walls/wall
-	icon = 'StoneWall.dmi'
-	icon_state = "wall"
+	name = "Stone Wall"
+	icon = 'Walls.dmi'
+	icon_state = "stonewall"
 	density = 1
 	opacity = 1
 
 //TRAP TURFS
 turf/trap/quicksand
-	icon = 'Sand.dmi'
+	name = "Sand"
+	icon = 'Traps.dmi'
 	icon_state = "quicksand"

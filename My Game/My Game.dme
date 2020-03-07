@@ -15,6 +15,7 @@
 // BEGIN_INCLUDE
 #include "Admin.dm"
 #include "Mobs.dm"
+#include "Monsters.dm"
 #include "Objects.dm"
 #include "Turfs.dm"
 #include "Vars.dm"

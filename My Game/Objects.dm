@@ -1,6 +1,7 @@
 /* OBJECT INFO */
 
 obj
-	sword
-		icon = 'sword.dmi'
-		icon_state = "sword"
+	ExplorerSword
+		name = "Explorer Sword"
+		icon = 'Swords.dmi'
+		icon_state = "explorer"
