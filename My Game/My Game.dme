@@ -17,6 +17,7 @@
 #include "Mobs.dm"
 #include "Monsters.dm"
 #include "Objects.dm"
+#include "TODO.dm"
 #include "Turfs.dm"
 #include "Vars.dm"
 #include "Verbs.dm"
