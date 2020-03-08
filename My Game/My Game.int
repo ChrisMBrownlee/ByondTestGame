@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1583552537
-DIR: backup Resources 
+LAST_COMPILE_TIME: 1583710648
+DIR: Aesthetics backup Code Images Maps TODO 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Mobs.dm;Monsters.dm;Verbs.dm;Vars.dm;Turfs.dm;NewMapTest.dmm;TODO.dm;World.dm
-FILE: Verbs.dm
+WINDOW: My Game.dme;Code\Mobs.dm;Code\Monsters.dm;Code\Objects.dm;Maps\NewMapTest.dmm
+FILE: My Game.dme
 */
 // END_INTERNALS
