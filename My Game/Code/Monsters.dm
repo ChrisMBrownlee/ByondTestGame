@@ -10,6 +10,13 @@
 //-----------------------------------------------------
 
 mob/NPC/Monster
+	New()
+		.=..()
+		spawn(1)
+			Look()
+		Update(src)
+		..()
+	density = 1
 
 //-----------------------------------------------------
 					//SLIMES//
@@ -24,15 +31,16 @@ mob/NPC/Monster
 			name = "Blue Slime"
 			icon = 'Monsters.dmi'
 			icon_state = "blueslime"
-			HP = 80
-			Power = 18
+			HP = 15
+			Power = 3
 			Guard = 13
 			Exp = 8
 			Level = 5
 			Gold = 3
 			Alignment = "Neutral"
-			HPMAX = 80
+			MAXHP = 80
 			DropCorpse = 0
+			ATKSPD = 10
 
 //-----------------------------------------------------
 					//RED SLIME//
@@ -41,15 +49,16 @@ mob/NPC/Monster
 			name = "Red Slime"
 			icon = 'Monsters.dmi'
 			icon_state = "redslime"
-			HP = 80
-			Power = 18
+			HP = 15
+			Power = 3
 			Guard = 13
 			Exp = 8
 			Level= 5
 			Gold = 3
 			Alignment = "Neutral"
-			HPMAX = 80
+			MAXHP = 80
 			DropCorpse = 0
+			ATKSPD = 10
 
 //-----------------------------------------------------
 					//NEW MONSTER//

@@ -16,4 +16,6 @@ world
 					//CONFIGURATIONS//
 //-----------------------------------------------------
 
-	mob = /mob/Player/
+	mob = /mob/usr/
+
+var npc = /mob/NPC/Monster/

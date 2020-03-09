@@ -6,22 +6,23 @@
 					//MOB VARIABLES//
 //-----------------------------------------------------
 
-mob
-	var
-		HP = 80
-		Power = 18
-		Guard = 13
-		Exp= 8
-		Level= 5
-		Gold = 3
-		Alignment = "Neutral"
-		HPMAX = 80
-		DropCorpse = 0
+mob/var
+	HP = 80
+	Power = 5
+	Guard = 13
+	Exp= 0
+	Level= 1
+	Gold = 0
+	Alignment = "Neutral"
+	MAXHP = 80
+	DropCorpse = 0
+	ATKSPD = 7
+	attacking = 0
+	killlist = list("")
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//
 //-----------------------------------------------------
 
-obj
-	var
-		value = 1
+obj/var
+	value = 1
