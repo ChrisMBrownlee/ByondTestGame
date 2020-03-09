@@ -18,7 +18,8 @@ mob/var
 	DropCorpse = 0
 	ATKSPD = 7
 	attacking = 0
-	killlist = list("")
+
+mob/var/list/KL
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//
@@ -26,3 +27,4 @@ mob/var
 
 obj/var
 	value = 1
+

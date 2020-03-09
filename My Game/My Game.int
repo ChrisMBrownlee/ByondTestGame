@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1583729420
+LAST_COMPILE_TIME: 1583738099
 DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Weapons Maps TODO 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: My Game.dme;Code\Vars.dm;Code\Mobs.dm;Code\Monsters.dm;Code\World.dm;Code\Verbs.dm;Maps\NewMapTest.dmm
+WINDOW: Code\Vars.dm;Code\Verbs.dm
 FILE: Code\Verbs.dm
 */
 // END_INTERNALS

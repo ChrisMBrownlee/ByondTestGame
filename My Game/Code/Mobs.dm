@@ -15,7 +15,12 @@ mob/usr
 //-----------------------------------------------------
 
 	Login()
-		world << "[src] has joined the world."
+		if(key in God)
+			world << "The Deity, [src], has blessed you with their presence."
+		else if(key in Admin)
+			world << "The Admin, [src], has blessed you with their presence."
+		else
+			world << "[src] has joined the world."
 		src.loc = locate(/turf/Start)
 		..()
 
@@ -35,3 +40,5 @@ mob/usr
 	HP = 30
 	step_size = 10
 	attacking = 0
+
+mob/DM
