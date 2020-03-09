@@ -8,6 +8,10 @@
 // BEGIN_FILE_DIR
 #define FILE_DIR .
 #define FILE_DIR "Images"
+#define FILE_DIR "Images/Armors"
+#define FILE_DIR "Images/Characters"
+#define FILE_DIR "Images/Environments"
+#define FILE_DIR "Images/Weapons"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES

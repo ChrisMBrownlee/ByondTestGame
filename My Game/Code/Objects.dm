@@ -1,7 +1,26 @@
-/* OBJECT INFO */
+//-----------------------------------------------------
+					//OBJECTS FILE//
+//-----------------------------------------------------
 
 obj
+
+//-----------------------------------------------------
+					//OBJ VERBS//
+//-----------------------------------------------------
+	verb
+		Get()
+			set src in usr.loc
+			loc = usr
+		Drop()
+			set src in usr
+			loc = usr.loc
+
+//-----------------------------------------------------
+					//OBJECTS//
+//-----------------------------------------------------
+
 	ExplorerSword
 		name = "Explorer Sword"
-		icon = 'Swords.dmi'
+		icon = 'Warrior Weapons.dmi'
 		icon_state = "explorer"
+		value = 1

@@ -16,18 +16,30 @@ mob
 
 	verb
 		Smile()
-			world << "[usr] smiles."
+			view() << "[usr] smiles."
 
 		Laugh()
-			world << "[usr] laughs."
+			view() << "[usr] laughs."
 
 		Cry()
-			world << "[usr] cries \his heart out."
+			view() << "[usr] cries \his heart out."
 
 		Say(msg as text)
-			world << "[usr]: [msg]"
+			view() << "[usr]: [msg]"
+
+		Poke(M as mob in view(1))
+			view() << "[usr] pokes [M]"
+
+		Whisper(M as mob, msg as text)
+			M << "[usr] whispers to you, '[msg]'"
+			src << "You whisper to [M], '[msg]'"
+
+		World_Say(msg as text)
+			world << "[usr] shouts: '[msg]'"
 
 //-----------------------------------------------------
-					//NEW VERBS//
+					//TEST VERBS//
 //-----------------------------------------------------
+
+	verb
 
