@@ -63,6 +63,7 @@ mob/verb/Attack()
 			var/hit = rand(1, 100)
 			M.KL += src.name
 			world << "[M.KL]"
+			//M.CA == 1
 			if(hit <= 50)
 				src << "You attack [M] for [damage] damage!"
 				M << "[src] attacks you for [damage] damage!"
@@ -97,6 +98,7 @@ mob/proc/Look()
 		else//MOB IS NEUTRAL
 			if(Player in view())
 				if(Player.name in src.KL)
+				//if(M.CA == 1)
 					world << "[src.KL] must die!"
 					walk_to(src, Player, 1, 4)
 					if(Player in oview(1))
