@@ -131,16 +131,3 @@ mob/proc/Update()
 //-----------------------------------------------------
 					//TEST VERBS//
 //-----------------------------------------------------
-
-/*
-if(Player.name in src.killlist)
-					world << "[src.killlist] must die!"
-					walk_to(src, Player, 1, 4)
-					if(Player in oview(1))
-						step_towards(src, Player)
-				else
-				world << "[src] says, 'I stepped'"
-				step_rand(src)
-				sleep(15)
-				break*/
-
