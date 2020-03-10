@@ -13,13 +13,14 @@ mob/var
 	Exp= 0
 	Level= 1
 	Gold = 0
-	Alignment = "Neutral"
+	ALIGN = "Neutral"
 	MAXHP = 80
 	DropCorpse = 0
 	ATKSPD = 7
 	attacking = 0
-
-mob/var/list/KL[0]
+	killlist = new /list(1)
+	MOVSPD = 10
+		
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//

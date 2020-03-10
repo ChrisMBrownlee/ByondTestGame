@@ -50,7 +50,7 @@ mob/verb
 
 mob/verb/Attack()
 	if(usr.attacking == 0)
-		var/obj/K = new/obj/ExplorerSword
+		var/obj/K = new/obj/ExplorerSword		
 		src.attacking = 1
 		K.dir = src.dir
 		K.loc = src.loc
@@ -61,8 +61,7 @@ mob/verb/Attack()
 				continue
 			var/damage = rand(usr.Power - 3, usr.Power + 3)
 			var/hit = rand(1, 100)
-			M.KL += src.name
-			world << "[KL[0]]"
+			M.killlist += "[usr.name]"
 			if(hit <= 50)
 				src << "You attack [M] for [damage] damage!"
 				M << "[src] attacks you for [damage] damage!"
@@ -81,32 +80,28 @@ mob/verb/Attack()
 //-----------------------------------------------------
 
 mob/proc/Look()
-	var/mob/usr/Player
+	var/mob/usr/Player	
 	while(src)
-		if(src.Alignment == "Evil") //IF MOB IS EVIL
-			if(Player in oview(5))
+		if(Player in oview(3))
+			if(src.ALIGN == "Evil")
 				walk_to(src, Player, 1, 4)
 				if(Player in oview(1))
 					step_towards(src, Player)
 				else
 					step_rand(src)
-					break
+					break			
 			else
-				for(Player in view(src))
-					break
-		else//MOB IS NEUTRAL
-			if(Player in view())
-				if(Player.name in src.KL)
-				//if(M.CA == 1)
-					world << "[src.KL] must die!"
+				if(Player.name in src.killlist)
 					walk_to(src, Player, 1, 4)
 					if(Player in oview(1))
 						step_towards(src, Player)
 				else
-					world << "[src] says, 'I stepped'"
 					step_rand(src)
 					sleep(15)
 					break
+		else
+			for(Player in view(src))
+				break				
 		sleep(5)
 	spawn(2)
 		Look()
@@ -137,5 +132,15 @@ mob/proc/Update()
 					//TEST VERBS//
 //-----------------------------------------------------
 
-mob/verb
+/*
+if(Player.name in src.killlist)
+					world << "[src.killlist] must die!"
+					walk_to(src, Player, 1, 4)
+					if(Player in oview(1))
+						step_towards(src, Player)
+				else
+				world << "[src] says, 'I stepped'"
+				step_rand(src)
+				sleep(15)
+				break*/
 

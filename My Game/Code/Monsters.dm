@@ -15,7 +15,9 @@ mob/NPC/Monster
 		spawn(1)
 			Look()
 		Update(src)
-		..()
+	Bump(mob/M)
+		if(M.client)
+			MonsterAttack(M)
 	density = 1
 
 //-----------------------------------------------------
@@ -37,10 +39,11 @@ mob/NPC/Monster
 			Exp = 8
 			Level = 5
 			Gold = 3
-			Alignment = "Neutral"
+			ALIGN = "Neutral"
 			MAXHP = 80
 			DropCorpse = 0
 			ATKSPD = 10
+			MOVSPD = 30
 
 //-----------------------------------------------------
 					//RED SLIME//
@@ -55,10 +58,11 @@ mob/NPC/Monster
 			Exp = 8
 			Level= 5
 			Gold = 3
-			Alignment = "Neutral"
+			ALIGN = "Neutral"
 			MAXHP = 80
 			DropCorpse = 0
 			ATKSPD = 10
+			MOVSPD = 30
 
 //-----------------------------------------------------
 					//NEW MONSTER//
