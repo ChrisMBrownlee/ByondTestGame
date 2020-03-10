@@ -3,4 +3,4 @@
 //-----------------------------------------------------
 
 var/list/God = list("Kiln")
-var/list/Admin = list("ErebusAres")
+var/list/Admin = list("ErebusAres", "Kiln")

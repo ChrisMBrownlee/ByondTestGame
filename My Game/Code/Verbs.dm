@@ -10,12 +10,13 @@
 
 mob/var
 		ServerTalkOn=1
-client/New()
-	if(key in Admin)
-		usr = new/mob/DM()
-		usr.name = key
-		usr.key = key
-	return ..()
+
+//client/New()
+//	if(key in Admin)
+//		usr = new/mob/DM()
+//		usr.name = key
+//		usr.key = key
+//	return ..()
 
 //-----------------------------------------------------
 					//PASSIVE VERBS//
@@ -50,7 +51,7 @@ mob/verb
 
 mob/verb/Attack()
 	if(usr.attacking == 0)
-		var/obj/K = new/obj/ExplorerSword		
+		var/obj/K = new/obj/ExplorerSword
 		src.attacking = 1
 		K.dir = src.dir
 		K.loc = src.loc
@@ -80,16 +81,16 @@ mob/verb/Attack()
 //-----------------------------------------------------
 
 mob/proc/Look()
-	var/mob/usr/Player	
+	var/mob/usr/Player
 	while(src)
-		if(Player in oview(3))
+		if(Player in oview(6))
 			if(src.ALIGN == "Evil")
 				walk_to(src, Player, 1, 4)
 				if(Player in oview(1))
 					step_towards(src, Player)
 				else
 					step_rand(src)
-					break			
+					break
 			else
 				if(Player.name in src.killlist)
 					walk_to(src, Player, 1, 4)
@@ -97,14 +98,18 @@ mob/proc/Look()
 						step_towards(src, Player)
 				else
 					step_rand(src)
-					sleep(15)
+					sleep(src.MOVSPD)
 					break
 		else
 			for(Player in view(src))
-				break				
+				break
 		sleep(5)
 	spawn(2)
 		Look()
+
+//-----------------------------------------------------
+					//MONSTER ATTACK VERBS//
+//-----------------------------------------------------
 
 mob/proc/MonsterAttack(mob/M)
 	var/dodamage = rand(1, src.Power)
@@ -117,13 +122,21 @@ mob/proc/MonsterAttack(mob/M)
 	if(M.HP <= 0)
 		Death(M)
 
+//-----------------------------------------------------
+					//DEATH VERBS//
+//-----------------------------------------------------
+
 mob/proc/Death(mob/M)
 	view() << "[M] has died"
 	if(M.client)
-		M.loc = /turf/Start/
+		M.loc = locate(/turf/Start)
 		M.HP = usr.MAXHP
 	else
 		del(M)
+
+//-----------------------------------------------------
+					//UPDATE VERBS//
+//-----------------------------------------------------
 
 mob/proc/Update()
 	return
@@ -131,3 +144,6 @@ mob/proc/Update()
 //-----------------------------------------------------
 					//TEST VERBS//
 //-----------------------------------------------------
+
+
+

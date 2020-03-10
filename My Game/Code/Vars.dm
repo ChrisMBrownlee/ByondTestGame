@@ -20,7 +20,7 @@ mob/var
 	attacking = 0
 	killlist = new /list(1)
 	MOVSPD = 10
-		
+	CA = 0
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//

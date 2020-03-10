@@ -43,7 +43,8 @@ mob/NPC/Monster
 			MAXHP = 80
 			DropCorpse = 0
 			ATKSPD = 10
-			MOVSPD = 30
+			MOVSPD = 20
+			CA = 1
 
 //-----------------------------------------------------
 					//RED SLIME//
@@ -62,7 +63,8 @@ mob/NPC/Monster
 			MAXHP = 80
 			DropCorpse = 0
 			ATKSPD = 10
-			MOVSPD = 30
+			MOVSPD = 20
+			CA = 1
 
 //-----------------------------------------------------
 					//NEW MONSTER//
