@@ -19,7 +19,7 @@ mob/var
 	ATKSPD = 7
 	attacking = 0
 
-mob/var/list/KL
+mob/var/list/KL[0]
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//

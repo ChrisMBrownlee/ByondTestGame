@@ -62,7 +62,7 @@ mob/verb/Attack()
 			var/damage = rand(usr.Power - 3, usr.Power + 3)
 			var/hit = rand(1, 100)
 			M.KL += src.name
-			world << "[M.KL]"
+			world << "[KL[0]]"
 			if(hit <= 50)
 				src << "You attack [M] for [damage] damage!"
 				M << "[src] attacks you for [damage] damage!"
