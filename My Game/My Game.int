@@ -2,11 +2,11 @@
 /*
 MAP_ZOOM: 1.000
 LAST_COMPILE_TIME: 1583818602
-DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Weapons Maps TODO 
+DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Weapons Maps References TODO 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Code\Vars.dm;Code\Verbs.dm;Maps\NewMapTest.dmm;Code\Mobs.dm;Code\World.dm;Code\Turfs.dm;Code\Objects.dm;Code\Monsters.dm;Code\Admin.dm
-FILE: Code\Verbs.dm
+WINDOW: References\Monsters.dm
+FILE: References\Monsters.dm
 */
 // END_INTERNALS
