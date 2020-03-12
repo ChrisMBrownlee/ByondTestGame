@@ -148,40 +148,6 @@ menu "menu"
 		command = "drop"
 		category = "Game"
 		saved-params = "is-checked"
-	elem 
-		name = "Team"
-		command = ""
-		saved-params = "is-checked"
-	elem 
-		name = "Talk"
-		command = "group-speak"
-		category = "Team"
-		saved-params = "is-checked"
-	elem 
-		name = "Disband"
-		command = "team-disband"
-		category = "Team"
-		saved-params = "is-checked"
-	elem 
-		name = "Follow"
-		command = "team-follow"
-		category = "Team"
-		saved-params = "is-checked"
-	elem 
-		name = "Stop Follower"
-		command = "stop-follower"
-		category = "Team"
-		saved-params = "is-checked"
-	elem 
-		name = "Chat Properties"
-		command = ""
-		saved-params = "is-checked"
-	elem 
-		name = "Say Colors"
-		command = "PickSayColor"
-		category = "Chat Properties"
-		group = "Bleep"
-		saved-params = "is-checked"
 
 
 window "ArmorS"
@@ -232,8 +198,6 @@ window "Bank"
 		can-minimize = false
 		can-resize = false
 		on-close = "close-bank"
-		outer-size = 264x367
-		inner-size = 248x328
 	elem "bankgrid"
 		type = GRID
 		pos = 0,32
@@ -369,7 +333,6 @@ window "GM"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		title = "GM"
 		titlebar = false
@@ -378,7 +341,6 @@ window "GM"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "GMC"
 		type = OUTPUT
 		pos = 0,0
@@ -566,18 +528,14 @@ window "HIDDENSHIT"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-maximized"
-		outer-size = 656x538
-		inner-size = 640x499
 	elem "hiddenbrowser"
 		type = BROWSER
 		pos = 0,0
 		size = 200x200
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = ""
 
 window "chatsplit"
@@ -587,7 +545,6 @@ window "chatsplit"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -595,7 +552,6 @@ window "chatsplit"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "chattabs"
 		type = TAB
 		pos = 0,0
@@ -626,8 +582,6 @@ window "deletechar"
 		can-minimize = false
 		can-resize = false
 		on-close = "DeleteClose"
-		outer-size = 437x519
-		inner-size = 421x480
 	elem "label1"
 		type = LABEL
 		pos = 0,0
@@ -790,8 +744,6 @@ window "mainwindow"
 		image-mode = center
 		macro = "macro"
 		menu = "menu"
-		outer-size = 656x518
-		inner-size = 640x459
 	elem "mainvsplit"
 		type = CHILD
 		pos = 3,0
@@ -862,7 +814,6 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -875,7 +826,6 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -888,7 +838,6 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
-		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -903,7 +852,6 @@ window "mapwindow"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		titlebar = false
 		statusbar = false
@@ -911,7 +859,6 @@ window "mapwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "map"
 		type = MAP
 		pos = 0,0
@@ -940,7 +887,6 @@ window "outputwindow"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "output"
 		type = OUTPUT
 		pos = 0,0
@@ -970,7 +916,6 @@ window "rpane"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "rpanewindow"
 		type = CHILD
 		pos = 0,0
@@ -1038,13 +983,10 @@ window "browserwindow"
 		size = 736x733
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		title = "Browser"
 		statusbar = false
 		is-pane = true
-		outer-size = 736x733
-		inner-size = 720x694
 	elem "browser"
 		type = BROWSER
 		pos = 0,0
@@ -1066,13 +1008,10 @@ window "infowindow"
 		size = 720x694
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		title = "Info"
 		statusbar = false
 		is-pane = true
-		outer-size = 720x694
-		inner-size = 704x655
 	elem "info"
 		type = INFO
 		pos = 0,0
@@ -1150,8 +1089,6 @@ window "trainer"
 		title = "Trainer"
 		can-resize = false
 		on-close = "Stop-Training"
-		outer-size = 364x396
-		inner-size = 348x357
 	elem "label45"
 		type = LABEL
 		pos = 20,40

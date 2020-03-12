@@ -11,6 +11,7 @@
 #define FILE_DIR "Images/Armors"
 #define FILE_DIR "Images/Characters"
 #define FILE_DIR "Images/Environments"
+#define FILE_DIR "Images/Misc"
 #define FILE_DIR "Images/Weapons"
 // END_FILE_DIR
 
@@ -23,6 +24,7 @@
 #include "Code\Mobs.dm"
 #include "Code\Monsters.dm"
 #include "Code\Objects.dm"
+#include "Code\StatPanel.dm"
 #include "Code\Turfs.dm"
 #include "Code\Vars.dm"
 #include "Code\Verbs.dm"

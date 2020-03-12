@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1583818602
-DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Weapons Maps References TODO 
+LAST_COMPILE_TIME: 1583993212
+DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps TODO 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: References\Monsters.dm
-FILE: References\Monsters.dm
+WINDOW: Code\Admin.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Objects.dm;Code\Turfs.dm;Code\Vars.dm;Code\Verbs.dm;Code\World.dm;Aesthetics\byond.dmf;Code\StatPanel.dm
+FILE: Code\StatPanel.dm
 */
 // END_INTERNALS
