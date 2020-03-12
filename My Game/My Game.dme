@@ -24,7 +24,7 @@
 #include "Code\Mobs.dm"
 #include "Code\Monsters.dm"
 #include "Code\Objects.dm"
-#include "Code\StatPanel.dm"
+#include "Code\Tabs.dm"
 #include "Code\Turfs.dm"
 #include "Code\Vars.dm"
 #include "Code\Verbs.dm"

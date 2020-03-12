@@ -7,11 +7,30 @@
 //-----------------------------------------------------
 
 mob/var
+//STATS
+	STR = 1
+	DEX = 1
+	INT = 1
+	LUK = 1
+	CON = 1
+	CHA = 1
+	FTH = 1
+//TEMP STATS
+	TMPSTR = 0
+	TMPDEX = 0
+	TMPINT = 0
+	TMPLUK = 0
+	TMPCON = 0
+	TMPCHA = 0
+	TMPFTH = 0
+//HELD POINTS
+	RemainingAP = 0
+	RemainingSP = 0
 //INTS
 	HP = 80
 	MAXHP = 80
-	SP = 10
-	MAXSP = 10
+	MP = 10
+	MAXMP = 10
 	Power = 5
 	AddedPower = 0
 	Guard = 13
@@ -38,4 +57,12 @@ mob/var
 
 obj/var
 	value = 1
+
+//-----------------------------------------------------
+					//GENDER VARIABLES//
+//-----------------------------------------------------
+
+var
+	maleshow = new/obj/male
+	femaleshow = new/obj/female
 
