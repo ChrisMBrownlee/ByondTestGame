@@ -21,6 +21,7 @@
 // BEGIN_INCLUDE
 #include "Aesthetics\byond.dmf"
 #include "Code\Admin.dm"
+#include "Code\ExpValues.dm"
 #include "Code\Mobs.dm"
 #include "Code\Monsters.dm"
 #include "Code\Objects.dm"

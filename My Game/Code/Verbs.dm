@@ -146,4 +146,5 @@ mob/proc/Update()
 //-----------------------------------------------------
 
 
-
+mob/verb/CheckExpVals()
+	world << "Test: [explist[0]], [explist[1]], [explist[2]]"
