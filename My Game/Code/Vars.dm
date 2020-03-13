@@ -49,7 +49,7 @@ mob/var
 	Class = "Explorer"
 	Gender = "Male"
 //LISTS
-	killlist = new /list(1)
+	list/killlist[5]// = new /list(1)
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//

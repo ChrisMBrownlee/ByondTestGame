@@ -64,10 +64,3 @@ mob/usr/Stat()
 //-----------------------------------------------------
 					//NEW TAB//
 //-----------------------------------------------------
-	statpanel("Exp Stuff")
-	if(usr.client.statpanel == "Exp Stuff")
-		stat("Required EXP Lv 1:", "[explist.[1]]")
-		stat("Required EXP Lv 2:", "[explist.[2]]")
-		stat("Required EXP Lv 3:", "[explist.[3]]")
-		stat("Required EXP Lv 4:", "[explist.[4]]")
-		stat("Required EXP Lv 5:", "[explist.[5]]")

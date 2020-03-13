@@ -145,6 +145,28 @@ mob/proc/Update()
 					//TEST VERBS//
 //-----------------------------------------------------
 
+mob/verb/Meditate()
+	usr << "You start meditating"
+	while(usr.Move() || usr.HP != usr.MAXHP || usr.MP != usr.MAXMP)
+		if(usr.HP != usr.MAXHP)
+			if(usr.HP > usr.MAXHP)
+				usr.HP = usr.MAXHP
+			else
+				usr << "You restore [usr.CON] HP"
+				usr.HP += usr.CON
+		if(usr.MP != usr.MAXMP)
+			if(usr.MP > usr.MAXMP)
+				usr.MP = usr.MAXMP
+			else
+				usr << "You restore [usr.INT] MP"
+				usr.MP += usr.INT
+		sleep(15)
+	usr << "You stop meditating"
 
-mob/verb/CheckExpVals()
-	world << "Test: [explist[0]], [explist[1]], [explist[2]]"
+mob/verb/StabSelf()
+	usr << "You stab yourself for 5 damage"
+	usr.HP -= 5
+
+mob/verb/DispellMana()
+	usr << "You release 5 mana"
+	usr.MP -= 5
