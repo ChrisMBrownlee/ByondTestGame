@@ -36,7 +36,6 @@ mob/var
 	Guard = 13
 	AddedGuard = 0
 	Exp = 0
-	ExpMax = 15
 	Level = 1
 	Gold = 0
 	DropCorpse = 0
@@ -44,10 +43,12 @@ mob/var
 	attacking = 0
 	MOVSPD = 10
 	CA = 0
+	ServerTalkOn = 1
 //STRINGS
 	ALIGN = "Neutral"
 	Class = "Explorer"
 	Gender = "Male"
+	Status = "usr"
 //LISTS
 	list/killlist[5]// = new /list(1)
 

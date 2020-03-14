@@ -5,18 +5,25 @@
 	Notes:
 */
 //-----------------------------------------------------
-					//VERB VARS//
+					//CLIENT//
 //-----------------------------------------------------
 
-mob/var
-		ServerTalkOn=1
-
-//client/New()
-//	if(key in Admin)
-//		usr = new/mob/DM()
+client/New()
+	if(key in God)
+	src.verbs += typesof(/mob/God/verb)
+	src.verbs += typesof(/mob/Admin/verb)
+//		usr = new/mob/usr()
+//		usr = new/mob/Admin()
+//		usr = new/mob/God()
 //		usr.name = key
 //		usr.key = key
-//	return ..()
+	if(key in Admin)
+	src.verbs += typesof(/mob/Admin/verb)
+//		usr = new/mob/usr()
+//		usr = new/mob/Admin()
+//		usr.name = key
+//		usr.key = key
+	return ..()
 
 //-----------------------------------------------------
 					//PASSIVE VERBS//
@@ -129,9 +136,12 @@ mob/proc/MonsterAttack(mob/M)
 mob/proc/Death(mob/M)
 	view() << "[M] has died"
 	if(M.client)
-		M.loc = locate(/turf/Start)
-		M.HP = usr.MAXHP
+		M.loc = locate(/turf/Start) // Set Location to Spawn
+		M.HP = usr.MAXHP // Reset HP to Max
+		M.MP = usr.MAXMP // Reset MP to Max
 	else
+		GetExp(M, src)
+		GetGold(M, src)
 		del(M)
 
 //-----------------------------------------------------
@@ -140,6 +150,59 @@ mob/proc/Death(mob/M)
 
 mob/proc/Update()
 	return
+
+//-----------------------------------------------------
+					//EXP VERBS//
+//-----------------------------------------------------
+
+mob/proc/GetExp(mob/M, mob/Player)
+	Player.Exp += M.Exp
+	usr << "You gain [M.Exp] by sleighing [M]" //goo
+	while(Player.Exp > explist[Player.Level])
+		Player.Exp = (Player.Exp - explist[Player.Level])
+		LevelUp(Player)
+
+//-----------------------------------------------------
+					//LEVEL UP VERBS//
+//-----------------------------------------------------
+
+mob/proc/LevelUp(mob/Player)
+	//BUMP PLAYER LEVEL + 1
+	Player.Level += 1
+
+	//BUMP STATS UP
+	BumpStats(Player)
+
+	//SET CURRENT HP TO MAXHP
+	Player.HP = Player.MAXHP
+
+	//SET CURRENT MP TO MAXMP
+	Player.MP = Player.MAXMP
+
+mob/proc/BumpStats(mob/Player)
+//TODO: Make formula for stat gains
+	//BUMP STATS FIRST
+	Player.STR += (5)
+	Player.CON += (5)
+	Player.INT += (5)
+	Player.CHA += (5)
+	Player.DEX += (5)
+	Player.FTH += (5)
+	Player.LUK += (5)
+	//THEN FORMULATE FOR MISC STATS
+	Player.Power += (5)
+	Player.MAXHP += (5 + Player.CON)
+	Player.MAXMP += (5 + Player.INT)
+	view() << "[Player] Leveled Up!"
+	//TODO: PLAY LEVEL UP DING
+
+//-----------------------------------------------------
+					//GOLD VERBS//
+//-----------------------------------------------------
+
+mob/proc/GetGold(mob/M, mob/Player)
+	Player.Gold += M.Gold //Give Player Gold
+	usr << "[M] dropped [M.Gold] Gold!"
 
 //-----------------------------------------------------
 					//TEST VERBS//
@@ -162,11 +225,3 @@ mob/verb/Meditate()
 				usr.MP += usr.INT
 		sleep(15)
 	usr << "You stop meditating"
-
-mob/verb/StabSelf()
-	usr << "You stab yourself for 5 damage"
-	usr.HP -= 5
-
-mob/verb/DispellMana()
-	usr << "You release 5 mana"
-	usr.MP -= 5

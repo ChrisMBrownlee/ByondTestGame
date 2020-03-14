@@ -32,7 +32,8 @@ mob/usr/Stat()
 			stat("Guard:", "[usr.Guard]")
 		else
 			stat("Guard:", "[usr.Guard]([usr.AddedGuard])")
-		stat("Experience:", "[usr.Exp]/[usr.ExpMax]")
+		stat("Experience:", "[usr.Exp]/[explist[usr.Level]]")
+		stat("Gold:", "[usr.Gold]")
 
 //-----------------------------------------------------
 					//STATS TAB//
@@ -64,3 +65,4 @@ mob/usr/Stat()
 //-----------------------------------------------------
 					//NEW TAB//
 //-----------------------------------------------------
+
