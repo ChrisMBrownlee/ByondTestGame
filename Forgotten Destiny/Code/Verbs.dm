@@ -10,15 +10,15 @@
 
 client/New()
 	if(key in God)
-	src.verbs += typesof(/mob/God/verb)
-	src.verbs += typesof(/mob/Admin/verb)
+		src.verbs += typesof(/mob/God/verb)
+		src.verbs += typesof(/mob/Admin/verb)
 //		usr = new/mob/usr()
 //		usr = new/mob/Admin()
 //		usr = new/mob/God()
 //		usr.name = key
 //		usr.key = key
 	if(key in Admin)
-	src.verbs += typesof(/mob/Admin/verb)
+		src.verbs += typesof(/mob/Admin/verb)
 //		usr = new/mob/usr()
 //		usr = new/mob/Admin()
 //		usr.name = key
