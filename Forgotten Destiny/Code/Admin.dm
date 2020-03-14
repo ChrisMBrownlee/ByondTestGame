@@ -26,7 +26,7 @@ mob/Admin/verb
 			Death(usr)
 		else if (usr.HP <= 10)
 			usr << "One More Time You Will Die!"
-			usr.HP -= 5 
+			usr.HP -= 5
 		else
 			usr << "You stab yourself for 5 damage"
 			usr.HP -= 5
@@ -53,4 +53,4 @@ mob/Admin/verb
 					//MOD VERBS//
 //-----------------------------------------------------
 
-mob/Moderator/verb
+//mob/Moderator/verb
