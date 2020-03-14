@@ -57,8 +57,18 @@ mob/verb
 //-----------------------------------------------------
 
 mob/verb/Attack()
+	var/obj/K = new/obj
+	K.dir = src.dir
+	K.loc = src.loc
+	step(K, dir)
+	var/turf/X = K.loc
+	for(var/mob/M as mob in X)
+		if(M.CA == 1)
+			DoAttack()
+
+mob/proc/DoAttack()
 	if(usr.attacking == 0)
-		var/obj/K = new/obj/ExplorerSword
+		var/obj/K = new/obj/Swords/ExplorerSword
 		src.attacking = 1
 		K.dir = src.dir
 		K.loc = src.loc
@@ -210,7 +220,9 @@ mob/proc/GetGold(mob/M, mob/Player)
 
 mob/verb/Meditate()
 	usr << "You start meditating"
-	while(usr.Move() || usr.HP != usr.MAXHP || usr.MP != usr.MAXMP)
+	while(usr.HP != usr.MAXHP || usr.MP != usr.MAXMP)
+		if(usr.Move())
+			break
 		if(usr.HP != usr.MAXHP)
 			if(usr.HP > usr.MAXHP)
 				usr.HP = usr.MAXHP

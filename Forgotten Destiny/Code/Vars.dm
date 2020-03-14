@@ -44,6 +44,7 @@ mob/var
 	MOVSPD = 10
 	CA = 0
 	ServerTalkOn = 1
+	weapon_equipped = 0
 //STRINGS
 	ALIGN = "Neutral"
 	Class = "Explorer"
@@ -57,13 +58,14 @@ mob/var
 //-----------------------------------------------------
 
 obj/var
-	value = 1
+	value = 0
+	powmod = 0
 
 //-----------------------------------------------------
 					//GENDER VARIABLES//
 //-----------------------------------------------------
 
 var
-	maleshow = new/obj/male
-	femaleshow = new/obj/female
+	maleshow = new/obj/Misc/Male
+	femaleshow = new/obj/Misc/Female
 
