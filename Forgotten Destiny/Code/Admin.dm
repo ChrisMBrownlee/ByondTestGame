@@ -30,6 +30,6 @@ mob/Admin/verb
 
 	Regenerate(M as mob in view(6))
 		M << "A magical force restored you"
-		src << "You restored [M]"
-		//M.HP = M.MAXHP
-		//M.MP = M.MAXMP
+		src << "You Regenerated [M]"
+		M.HP = M.MAXHP
+		M.MP = M.MAXMP
