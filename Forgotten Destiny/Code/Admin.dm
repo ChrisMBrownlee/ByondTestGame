@@ -23,12 +23,13 @@ mob/Admin/verb
 		usr << "You release 5 mana"
 		usr.MP -= 5
 
-	GiveGold()
+	GiveGold(M as mob in view(6))
 		var/tempgold = input("How much gold to give?") as num
-		usr.Gold += tempgold
-		usr << "The Gods gift you [tempgold] Gold!"
+		M.Gold += tempgold
+		M << "The Gods gift you [tempgold] Gold!"
 
 	Regenerate(M as mob in view(6))
 		M << "A magical force restored you"
+		src << "You restored [M]"
 		//M.HP = M.MAXHP
 		//M.MP = M.MAXMP
