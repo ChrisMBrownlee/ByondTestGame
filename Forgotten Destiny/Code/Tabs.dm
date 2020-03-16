@@ -77,18 +77,3 @@ mob/usr/Stat()
 	statpanel("Equipment")
 	if(usr.client.statpanel == "Equipment")
 		stat("Empty")
-
-//-----------------------------------------------------
-					//ADMIN COMMANDS TAB//
-//-----------------------------------------------------
-
-
-
-//-----------------------------------------------------
-					//GOD COMMANDS TAB//
-//-----------------------------------------------------
-
-mob/God/Stat()
-	statpanel("God Commands")
-	if(usr.client.statpanel == "God Commands")
-		stat(typesof(/mob/God/verb))
