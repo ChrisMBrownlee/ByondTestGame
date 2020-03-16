@@ -13,6 +13,7 @@
 #define FILE_DIR "Images/Environments"
 #define FILE_DIR "Images/Misc"
 #define FILE_DIR "Images/Weapons"
+#define FILE_DIR "PNGs"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES
