@@ -257,14 +257,14 @@ mob/proc/ExpLoss()
 	var/MaxExpLoss = (BaseLoss * (1 - ExpLossPrev)) // Max EXP Loss for Over Level 30
 	if ( src.Level < 10 )
 		usr << "[NoLoss] Exp Lost"
-		usr.EXP - NoLoss
+		src.EXP - NoLoss
 	if ( src.Level >= 10 && src.Level < 30 )
 		usr << "[BaseLoss] Exp Lost"
-		usr.EXP - BaseLoss
-		if ( usr.EXP < 0 )
+		src.EXP - BaseLoss
+		if ( src.EXP < 0 )
 			usr.EXP = 0
 	if ( src.Level >= 30 )
 		usr << "[MaxExpLoss] Exp Lost"
-		usr.EXP - MaxExpLoss
-		if ( usr.EXP < 0 )
-			usr.EXP = 0
+		src.EXP - MaxExpLoss
+		if ( src.EXP < 0 )
+			src.EXP = 0
