@@ -248,9 +248,9 @@ proc/AddWeapon(mob/M, obj/S)
 
 mob/verb/ExpLossTest()
 	ExpLoss(M)
-	
+
 mob/proc/ExpLoss(mob/Player)
 	var/BExpLoss = 5%
 	var/ExpLossPrev = 0%
 	var/MExpLoss = (BExpLoss * (1 - ExpLossPrev / 100))
-	world << "[MExpLoss] Exp Lost"
+	usr << "[MExpLoss] Exp Lost"
