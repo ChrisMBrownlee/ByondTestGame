@@ -247,7 +247,6 @@ proc/AddWeapon(mob/M, obj/S)
 	M.underlays += image("[S.icon]", icon_state = "[S.overlay]", layer = S.layer)
 
 mob/verb/ExpLossTest()
-	set category = "Admin"
 	ExpLoss(src)
 
 mob/proc/ExpLoss()
