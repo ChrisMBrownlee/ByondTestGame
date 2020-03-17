@@ -163,7 +163,7 @@ mob/proc/Death(mob/M)
 					//EXPLOSS VERBS//
 //-----------------------------------------------------
 
-mob/proc/ExpLoss()
+mob/proc/ExpLoss(mob/M)
 	var/BaseLoss = 0.10 * explist[src.Level] // 10% of Level's Max Exp
 	var/ReduceLoss = 0.00 // % of Reduction Value
 	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // 10% * ( 1 - ReductionValue / 100 )
