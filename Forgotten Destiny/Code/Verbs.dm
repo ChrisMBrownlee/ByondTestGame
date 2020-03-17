@@ -250,16 +250,10 @@ mob/verb/ExpLossTest()
 	ExpLoss(src)
 
 mob/proc/ExpLoss()
-	var/NoLoss = 0.00
 	var/BaseLoss = 0.05 * explist[src.Level]
 	var/ReduceLoss = 0.00 // % of Reduction Value
-	var/NoMaxExpLoss = (NoLoss * (1 - ReduceLoss / 100))
 	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // Max EXP Loss for Over Level 30
-	if ( src.Level < 30 )
-		usr << "[NoMaxExpLoss] Exp Lost"
-		src.Exp -= NoMaxExpLoss
-	if ( src.Level >= 30 )
-		usr << "[MaxExpLoss] Exp Lost"
-		src.Exp -= MaxExpLoss
-		if ( src.Exp < 0 )
-			src.Exp = 0
+	usr << "[MaxExpLoss] Exp Lost"
+	src.Exp -= MaxExpLoss
+	if ( src.Exp < 0 )
+		src.Exp = 0
