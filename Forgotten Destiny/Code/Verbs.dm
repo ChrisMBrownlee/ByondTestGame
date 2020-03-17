@@ -147,6 +147,7 @@ mob/proc/MonsterAttack(mob/M)
 					//DEATH VERBS//
 //-----------------------------------------------------
 
+//TODO: MAKE DEATH VERB BETTER
 mob/proc/Death(mob/M)
 	view() << "[M] has died"
 	if(M.client)
@@ -164,13 +165,13 @@ mob/proc/Death(mob/M)
 //-----------------------------------------------------
 
 mob/proc/ExpLoss(mob/M)
-	var/BaseLoss = 0.10 * explist[src.Level] // 10% of Level's Max Exp
+	var/BaseLoss = 0.10 * explist[M.Level] // 10% of Level's Max Exp
 	var/ReduceLoss = 0.00 // % of Reduction Value
 	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // 10% * ( 1 - ReductionValue / 100 )
 	usr << "[MaxExpLoss] Exp Lost" // Tell User Amount of EXP lost
-	src.Exp -= MaxExpLoss // Set Current EXP to - MaxExpLoss 
-	if ( src.Exp < 0 )	// If Current EXP is Less Than 0
-		src.Exp = 0 	// Set Current EXP to 0
+	M.Exp -= MaxExpLoss // Set Current EXP to - MaxExpLoss
+	if ( M.Exp < 0 )	// If Current EXP is Less Than 0
+		M.Exp = 0 	// Set Current EXP to 0
 
 //-----------------------------------------------------
 					//UPDATE VERBS//

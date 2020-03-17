@@ -86,17 +86,22 @@ mob/Admin/verb
 		set desc = "Change a Mob's ID"
 		M.name = ID
 
-	Kill(mob/M in world)
+//TODO: FIX KILL COMMAND
+	Kill(mob/usr/M in world)
 		set category = "Admin"
 		set desc = "Kill someone or something"
-		M.HP -= M.MAXHP + 1000
-		Death(M)
-		src << "You killed [M]"
+		if(M.client)
+			src << "You killed [M]"
+			M << "You died at a God's will."
+			M.Death(M)
+		else
+			del(M)
 
 //-----------------------------------------------------
 					//MOD VERBS//
 //-----------------------------------------------------
 
+//TODO: FIX KICK COMMAND
 mob/Mod/verb
 	Kick(mob/M in world, reason as message|null)
 		if(usr.client)
