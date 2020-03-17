@@ -160,6 +160,19 @@ mob/proc/Death(mob/M)
 		del(M)
 
 //-----------------------------------------------------
+					//EXPLOSS VERBS//
+//-----------------------------------------------------
+
+mob/proc/ExpLoss()
+	var/BaseLoss = 0.05 * explist[src.Level]
+	var/ReduceLoss = 0.00 // % of Reduction Value
+	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // Max EXP Loss for Over Level 30
+	usr << "[MaxExpLoss] Exp Lost"
+	src.Exp -= MaxExpLoss
+	if ( src.Exp < 0 )
+		src.Exp = 0
+
+//-----------------------------------------------------
 					//UPDATE VERBS//
 //-----------------------------------------------------
 
@@ -246,14 +259,7 @@ proc/AddWeapon(mob/M, obj/S)
 	world << "[temp]"
 	M.underlays += image("[S.icon]", icon_state = "[S.overlay]", layer = S.layer)
 
-mob/verb/ExpLossTest()
-	ExpLoss(src)
-
-mob/proc/ExpLoss()
-	var/BaseLoss = 0.05 * explist[src.Level]
-	var/ReduceLoss = 0.00 // % of Reduction Value
-	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // Max EXP Loss for Over Level 30
-	usr << "[MaxExpLoss] Exp Lost"
-	src.Exp -= MaxExpLoss
-	if ( src.Exp < 0 )
-		src.Exp = 0
+// DODGE VERB REWORK BELOW
+//dodge = (sqrt(DEX + 2 * LUK) - sqrt( Monster Accuracy ) - 2 * (MonsterLevel - CharacterLevel)) * (1 + Evasion% / 100)
+//if (dodge > .90)
+//  dodge = .90

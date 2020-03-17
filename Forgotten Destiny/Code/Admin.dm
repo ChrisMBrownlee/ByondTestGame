@@ -86,6 +86,13 @@ mob/Admin/verb
 		set desc = "Change a Mob's ID"
 		M.name = ID
 
+	Kill(mob/M in world)
+		set category = "Admin"
+		set desc = "Kill someone or something"
+		M.HP -= M.MAXHP + 1000
+		Death()
+		src << "You killed [M]"
+
 //-----------------------------------------------------
 					//MOD VERBS//
 //-----------------------------------------------------
