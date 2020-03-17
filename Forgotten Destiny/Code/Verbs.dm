@@ -153,6 +153,7 @@ mob/proc/Death(mob/M)
 		M.loc = locate(/turf/Start) // Set Location to Spawn
 		M.HP = usr.MAXHP // Reset HP to Max
 		M.MP = usr.MAXMP // Reset MP to Max
+		ExpLoss(M)
 	else
 		GetExp(M, src)
 		GetGold(M, src)
@@ -244,3 +245,12 @@ proc/AddWeapon(mob/M, obj/S)
 	var/temp = S.icon
 	world << "[temp]"
 	M.underlays += image("[S.icon]", icon_state = "[S.overlay]", layer = S.layer)
+
+mob/verb/ExpLossTest()
+	ExpLoss(M)
+	
+mob/proc/ExpLoss(mob/Player)
+	var/BExpLoss = 5%
+	var/ExpLossPrev = 0%
+	var/MExpLoss = (BExpLoss * (1 - ExpLossPrev / 100))
+	world << "[MExpLoss] Exp Lost"
