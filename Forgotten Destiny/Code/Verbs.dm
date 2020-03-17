@@ -153,7 +153,7 @@ mob/proc/Death(mob/M)
 		M.loc = locate(/turf/Start) // Set Location to Spawn
 		M.HP = usr.MAXHP // Reset HP to Max
 		M.MP = usr.MAXMP // Reset MP to Max
-		ExpLoss(M)
+		ExpLoss(M) // ExpLoss Call
 	else
 		GetExp(M, src)
 		GetGold(M, src)
@@ -164,13 +164,13 @@ mob/proc/Death(mob/M)
 //-----------------------------------------------------
 
 mob/proc/ExpLoss()
-	var/BaseLoss = 0.05 * explist[src.Level]
+	var/BaseLoss = 0.10 * explist[src.Level] // 10% of Level's Max Exp
 	var/ReduceLoss = 0.00 // % of Reduction Value
-	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // Max EXP Loss for Over Level 30
-	usr << "[MaxExpLoss] Exp Lost"
-	src.Exp -= MaxExpLoss
-	if ( src.Exp < 0 )
-		src.Exp = 0
+	var/MaxExpLoss = (BaseLoss * (1 - ReduceLoss / 100)) // 10% * ( 1 - ReductionValue / 100 )
+	usr << "[MaxExpLoss] Exp Lost" // Tell User Amount of EXP lost
+	src.Exp -= MaxExpLoss // Set Current EXP to - MaxExpLoss 
+	if ( src.Exp < 0 )	// If Current EXP is Less Than 0
+		src.Exp = 0 	// Set Current EXP to 0
 
 //-----------------------------------------------------
 					//UPDATE VERBS//
