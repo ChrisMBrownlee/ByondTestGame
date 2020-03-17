@@ -90,7 +90,7 @@ mob/Admin/verb
 		set category = "Admin"
 		set desc = "Kill someone or something"
 		M.HP -= M.MAXHP + 1000
-		Death(M)
+		Death(mob/M)
 		src << "You killed [M]"
 
 //-----------------------------------------------------
