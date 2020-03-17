@@ -171,7 +171,7 @@ mob/proc/Update()
 
 mob/proc/GetExp(mob/M, mob/Player)
 	Player.Exp += M.Exp
-	usr << "You gain [M.Exp] by sleighing [M]" //goo
+	usr << "You gain [M.Exp] by sleighing [M]"
 	while(Player.Exp > explist[Player.Level])
 		Player.Exp = (Player.Exp - explist[Player.Level])
 		LevelUp(Player)
