@@ -225,8 +225,6 @@ mob/proc/GetGold(mob/M, mob/Player)
 mob/verb/Meditate()
 	usr << "You start meditating"
 	while(usr.HP != usr.MAXHP || usr.MP != usr.MAXMP)
-		if(usr.Move())
-			break
 		if(usr.HP != usr.MAXHP)
 			if(usr.HP > usr.MAXHP)
 				usr.HP = usr.MAXHP

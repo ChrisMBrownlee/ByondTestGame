@@ -9,13 +9,17 @@ mob/usr
 //-----------------------------------------------------
 
 	icon = 'Player.dmi'
-	icon_state = "BasePlayer"
 
 //-----------------------------------------------------
 					//LOG IN//
 //-----------------------------------------------------
 
 	Login()
+		if(usr.Gender == "Male")
+			icon_state = "Male"
+		else
+			icon_state = "Female"
+
 		if(key in God)
 			world << "The Deity, [src], has blessed you with their presence."
 			src.loc = locate(/turf/Start)

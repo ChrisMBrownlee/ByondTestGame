@@ -41,7 +41,7 @@ mob/var
 	DropCorpse = 0
 	ATKSPD = 7
 	attacking = 0
-	MOVSPD = 10
+	MOVSPD = 30
 	CA = 0
 	ServerTalkOn = 1
 	weapon_equipped = 0
