@@ -23,6 +23,7 @@ obj
 			if(usr.weapon_equipped == 0)
 				usr.Power += src.powmod
 				usr.weapon_equipped = 1
+				AddWeapon(usr, src)
 				usr << "You equip [src.name]."
 			else
 				usr << "Unequip your [src.name] first"
@@ -51,6 +52,8 @@ obj/Misc
 //-----------------------------------------------------
 
 obj/Swords
+	layer = 2.2
+
 	ExplorerSword
 		name = "Explorer Sword"
 		icon = 'Warrior Weapons.dmi'
@@ -63,9 +66,12 @@ obj/Swords
 //-----------------------------------------------------
 
 obj/Daggers
+	layer = 2.2
+
 	TestDagger
 		name = "Admin Dagger"
 		icon = 'Rogue Weapons.dmi'
-		icon_state = "TestDagger"
+		icon_state = "TestDaggerObj"
+		overlay = "TestDagger"
 		value = 0
 		powmod = 999

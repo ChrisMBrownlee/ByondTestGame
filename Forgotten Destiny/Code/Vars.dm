@@ -7,6 +7,12 @@
 //-----------------------------------------------------
 
 mob/var
+//USER IMAGES
+	Hair = ""
+	Weapon = ""
+	Armor = ""
+	Boots = ""
+	Gloves = ""
 //STATS
 	STR = 1
 	DEX = 1
@@ -26,19 +32,23 @@ mob/var
 //HELD POINTS
 	RemainingAP = 0
 	RemainingSP = 0
-//INTS
+//HP / MP
 	HP = 80
 	MAXHP = 80
 	MP = 10
 	MAXMP = 10
+//ATK / DEF
 	Power = 5
 	AddedPower = 0
 	Guard = 13
 	AddedGuard = 0
+//LEVEL STUFF
 	Exp = 0
 	Level = 1
+//DROP STUFF
 	Gold = 0
 	DropCorpse = 0
+//MODIFIERS
 	ATKSPD = 7
 	attacking = 0
 	MOVSPD = 30
@@ -52,7 +62,6 @@ mob/var
 	Status = "usr"
 //LISTS
 	list/killlist[5]// = new /list(1)
-
 //-----------------------------------------------------
 					//OBJECT VARIABLES//
 //-----------------------------------------------------
@@ -60,6 +69,7 @@ mob/var
 obj/var
 	value = 0
 	powmod = 0
+	overlay = ""
 
 //-----------------------------------------------------
 					//GENDER VARIABLES//
