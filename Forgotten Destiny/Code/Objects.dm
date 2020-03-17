@@ -57,3 +57,11 @@ obj/Swords
 		icon_state = "explorer"
 		value = 1
 		powmod = 1
+
+obj/Daggers
+	TestDagger
+		name="Admin Dagger"
+		icon 'Rogue Weapons.dmi'
+		icon_state = "TestDagger"
+		value = 0
+		powmod = 999
