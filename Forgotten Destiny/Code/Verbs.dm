@@ -247,10 +247,11 @@ proc/AddWeapon(mob/M, obj/S)
 	M.underlays += image("[S.icon]", icon_state = "[S.overlay]", layer = S.layer)
 
 mob/verb/ExpLossTest()
-	ExpLoss(M)
+	ExpLoss(src)
 
-mob/proc/ExpLoss(mob/Player)
-	var/BExpLoss = 5%
-	var/ExpLossPrev = 0%
+mob/proc/ExpLoss()
+	var/BExpLoss = 0.05 * Player.maxexp[src.level]
+	var/ELPP = 0.00
+	var/ExpLossPrev = ELPP * 100
 	var/MExpLoss = (BExpLoss * (1 - ExpLossPrev / 100))
 	usr << "[MExpLoss] Exp Lost"
