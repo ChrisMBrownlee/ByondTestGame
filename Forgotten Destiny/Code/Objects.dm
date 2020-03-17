@@ -60,8 +60,8 @@ obj/Swords
 
 obj/Daggers
 	TestDagger
-		name="Admin Dagger"
-		icon 'Rogue Weapons.dmi'
+		name = "Admin Dagger"
+		icon = 'Rogue Weapons.dmi'
 		icon_state = "TestDagger"
 		value = 0
 		powmod = 999
