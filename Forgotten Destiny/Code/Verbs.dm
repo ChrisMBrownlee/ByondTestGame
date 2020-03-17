@@ -250,7 +250,7 @@ mob/verb/ExpLossTest()
 	ExpLoss(src)
 
 mob/proc/ExpLoss()
-	var/BExpLoss = 0.05 * src.maxexp[src.level]
+	var/BExpLoss = 0.05 * explist[src.Level]
 	var/ELPP = 0.00
 	var/ExpLossPrev = ELPP * 100
 	var/MExpLoss = (BExpLoss * (1 - ExpLossPrev / 100))
