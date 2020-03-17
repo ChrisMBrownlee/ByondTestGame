@@ -241,4 +241,6 @@ mob/verb/Meditate()
 	usr << "You stop meditating"
 
 proc/AddWeapon(mob/M, obj/S)
+	var/temp = S.icon
+	world << "[temp]"
 	M.underlays += image("[S.icon]", icon_state = "[S.overlay]", layer = S.layer)
