@@ -85,16 +85,56 @@ var
 //-----------------------------------------------------
 
 mob
-    var
-        move_delay = 3   // how many ticks the player must wait between movements
-        tmp // these vars are not saved
-            move_time = 0    // the earliest time the mob may move
+	var
+		move_delay = 3
+		tmp
+			move_time = 0
 
 client
-    Move()
-        if(world.time < mob.move_time) // not enough time passed
-            return
+	Move()
+		if(world.time < mob.move_time)
+			return
+		mob.move_time = world.time + mob.move_delay
+		return ..()
 
-        // set the move_time for move_delay ticks from now
-        mob.move_time = world.time + mob.move_delay
-        return ..() // do the default Move() proc and return what it returns
+var/const
+	ACTION_RATE = 30
+	NO_ACTION
+
+mob
+	var
+		action_speed = 15
+		tmp
+			action = NO_ACTION
+			action_count = 0
+	New()
+		..()
+		spawn(1) lifecycle()
+	proc
+		lifecycle()
+			action_count += action_speed
+			if(action_count >= ACTION_RATE)
+				action_count -= ACTION_RATE
+				if(action)
+					step(src,action)
+				action = NO_ACTION
+			spawn(1) lifecycle()
+
+
+client
+	North()
+		mob.action = NORTH
+	South()
+		mob.action = SOUTH
+	East()
+		mob.action = EAST
+	West()
+		mob.action = WEST
+	Northeast()
+		mob.action = NORTHEAST
+	Northwest()
+		mob.action = NORTHWEST
+	Southeast()
+		mob.action = SOUTHEAST
+	Southwest()
+		mob.action = SOUTHWEST

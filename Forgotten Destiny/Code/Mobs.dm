@@ -47,5 +47,8 @@ mob/usr
 	Bump(mob/M)
 		if(M.CA == 1)
 			Attack()
+		else
+			if(M == client)
+				src.loc = M.loc
 
 
