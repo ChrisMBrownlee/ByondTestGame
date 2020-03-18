@@ -62,6 +62,7 @@ mob/var
 	Status = "usr"
 //LISTS
 	list/killlist[5]// = new /list(1)
+
 //-----------------------------------------------------
 					//OBJECT VARIABLES//
 //-----------------------------------------------------
@@ -79,9 +80,13 @@ var
 	maleshow = new/obj/Misc/Male
 	femaleshow = new/obj/Misc/Female
 
+//-----------------------------------------------------
+					//PLAYER MOVEMENT VARIABLES//
+//-----------------------------------------------------
+
 mob
     var
-        move_delay = 5   // how many ticks the player must wait between movements
+        move_delay = 3   // how many ticks the player must wait between movements
         tmp // these vars are not saved
             move_time = 0    // the earliest time the mob may move
 
