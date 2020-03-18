@@ -9,6 +9,7 @@ mob/usr
 //-----------------------------------------------------
 
 	icon = 'Player.dmi'
+//	winset(client, "default", "title = \"Forgotten Destiny\"")
 
 //-----------------------------------------------------
 					//LOG IN//
@@ -47,6 +48,5 @@ mob/usr
 	Bump(mob/M)
 		if(M.CA == 1)
 			Attack()
-		else
-			if(M == client)
-				src.loc = M.loc
+		else if(M.client)
+			usr.loc = M.loc

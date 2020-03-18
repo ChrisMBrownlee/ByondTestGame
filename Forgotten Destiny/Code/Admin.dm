@@ -71,7 +71,12 @@ mob/Admin/verb
 		usr << "You granted [M] Level [templevel]"
 		M.Level = templevel
 
-
+mob/Admin/verb
+	Summon(mob/M in world)
+		set category = "Admin"
+		M.loc = usr.loc
+		M << "[src] has summoned you."
+		src << "You have summoned [M]"
 
 	Rename(mob/M as mob in world, ID as text)
 		set category = "Admin"
@@ -127,14 +132,6 @@ mob/Mod/verb
 				usr << "You can't kick someone equal or higher than you"
 				M << "[src] tried to kick you."
 			return
-
-		if(alert("Are you sure?","Kick [M]:","Yes","No") == "Yes")
+		if(alert("Are you sure?", "Kick [M]:", "Yes", "No") == "Yes")
 		else
 			usr << "You can't kick npcs..."
-
-mob/Admin/verb
-	Summon(mob/M in world)
-		set category = "Test"
-		M.loc = src.loc
-		M << "[src] has summoned you."
-		src << "You have summoned [M]"

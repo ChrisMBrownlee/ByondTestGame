@@ -103,7 +103,7 @@ var/const
 
 mob
 	var
-		action_speed = 15
+		action_speed = 20
 		tmp
 			action = NO_ACTION
 			action_count = 0
