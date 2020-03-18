@@ -50,5 +50,3 @@ mob/usr
 		else
 			if(M == client)
 				src.loc = M.loc
-
-

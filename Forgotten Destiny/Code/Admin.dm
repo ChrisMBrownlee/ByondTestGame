@@ -71,15 +71,7 @@ mob/Admin/verb
 		usr << "You granted [M] Level [templevel]"
 		M.Level = templevel
 
-	Set_Stats(mob/usr/M in world)
-		set category = "Admin"
-		usr << "This does nothing right now, sorry..."
 
-	Summon(mob/M in world)
-		set category = "Admin"
-		M.loc = src.loc
-		M << "[src] has summoned you."
-		src << "You have summoned [M]"
 
 	Rename(mob/M as mob in world, ID as text)
 		set category = "Admin"
@@ -100,12 +92,31 @@ mob/Admin/verb
 					//MOD VERBS//
 //-----------------------------------------------------
 
+mob/Mod/verb
+
+//-----------------------------------------------------
+					//TEST MOD/ADMIN/GOD VERBS//
+//-----------------------------------------------------
+/*
+	NOTES:
+	These may not do anything yet, or need testing
+	Make sure that you change the category back
+		when you're done testing
+
+*/
+
+//TODO: MAKE THIS DO SOMETHING
+mob/Admin/verb
+	Set_Stats(mob/usr/M in world)
+		set category = "Test"
+		usr << "This does nothing right now, sorry..."
+
 //TODO: FIX KICK COMMAND
 //NEED TO TEST?
 mob/Mod/verb
 	Kick(mob/usr/M in world, reason as message|null)
 		if(M.client)
-			set category = "Admin"
+			set category = "Test"
 			set name = "Kick"
 			set desc = "(mob, \[reason]) Kick A Dick"
 			if(M == usr)
@@ -119,3 +130,10 @@ mob/Mod/verb
 		if(alert("Are you sure?","Kick [M]:","Yes","No") == "Yes")
 		else
 			usr << "You can't kick npcs..."
+
+mob/Admin/verb
+	Summon(mob/M in world)
+		set category = "Test"
+		M.loc = src.loc
+		M << "[src] has summoned you."
+		src << "You have summoned [M]"
