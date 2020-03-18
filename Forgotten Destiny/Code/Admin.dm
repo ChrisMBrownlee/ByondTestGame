@@ -80,12 +80,13 @@ mob/Admin/verb
 
 	Kill(mob/usr/M in world)
 		set category = "Admin"
-		set desc = "Kill someone or something"
+		set desc = "Kill A Player or Mob"
 		if(M.client)
 			src << "You killed [M]"
 			M << "You died at a God's will."
 			M.Death(M)
 		else
+			src << "You killed a [M]"
 			del(M)
 
 //-----------------------------------------------------
