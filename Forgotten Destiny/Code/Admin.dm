@@ -86,7 +86,7 @@ mob/Admin/verb
 			M << "You died at a God's will."
 			M.Death(M)
 		else
-			src << "You killed a [M]"
+			src << "You killed \a [M]"
 			del(M)
 
 //-----------------------------------------------------
