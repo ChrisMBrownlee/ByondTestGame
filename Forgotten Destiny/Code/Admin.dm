@@ -71,7 +71,6 @@ mob/Admin/verb
 		usr << "You granted [M] Level [templevel]"
 		M.Level = templevel
 
-mob/Admin/verb
 	Summon(mob/M in world)
 		set category = "Admin"
 		M.loc = usr.loc

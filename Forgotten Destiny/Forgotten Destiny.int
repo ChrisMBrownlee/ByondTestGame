@@ -2,11 +2,11 @@
 /*
 MAP_ZOOM: 1.000
 LAST_COMPILE_TIME: 1584550549
-DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps TODO 
+DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
 WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm
-FILE: Code\Mobs.dm
+FILE: Code\Admin.dm
 */
 // END_INTERNALS
