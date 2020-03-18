@@ -79,3 +79,17 @@ var
 	maleshow = new/obj/Misc/Male
 	femaleshow = new/obj/Misc/Female
 
+mob
+    var
+        move_delay = 5   // how many ticks the player must wait between movements
+        tmp // these vars are not saved
+            move_time = 0    // the earliest time the mob may move
+
+client
+    Move()
+        if(world.time < mob.move_time) // not enough time passed
+            return
+
+        // set the move_time for move_delay ticks from now
+        mob.move_time = world.time + mob.move_delay
+        return ..() // do the default Move() proc and return what it returns

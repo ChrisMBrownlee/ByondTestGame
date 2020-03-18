@@ -47,3 +47,5 @@ mob/usr
 	Bump(mob/M)
 		if(M.CA == 1)
 			Attack()
+
+

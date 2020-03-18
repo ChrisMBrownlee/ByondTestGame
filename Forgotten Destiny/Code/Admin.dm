@@ -86,7 +86,6 @@ mob/Admin/verb
 		set desc = "Change a Mob's ID"
 		M.name = ID
 
-//TODO: FIX KILL COMMAND
 	Kill(mob/usr/M in world)
 		set category = "Admin"
 		set desc = "Kill someone or something"
@@ -102,9 +101,10 @@ mob/Admin/verb
 //-----------------------------------------------------
 
 //TODO: FIX KICK COMMAND
+//NEED TO TEST?
 mob/Mod/verb
-	Kick(mob/M in world, reason as message|null)
-		if(usr.client)
+	Kick(mob/usr/M in world, reason as message|null)
+		if(M.client)
 			set category = "Admin"
 			set name = "Kick"
 			set desc = "(mob, \[reason]) Kick A Dick"
