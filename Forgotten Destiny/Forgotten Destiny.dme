@@ -32,6 +32,5 @@
 #include "Code\Verbs.dm"
 #include "Code\World.dm"
 #include "Maps\NewMapTest.dmm"
-#include "Notes\TODO.dm"
 // END_INCLUDE
 
