@@ -14,13 +14,13 @@ mob/var
 	Boots = ""
 	Gloves = ""
 //STATS
-	STR = 1
-	DEX = 1
-	INT = 1
-	LUK = 1
-	CON = 1
-	CHA = 1
-	FTH = 1
+	STR = 5
+	DEX = 5
+	INT = 5
+	LUK = 5
+	CON = 5
+	CHA = 5
+	FTH = 5
 //TEMP STATS
 	TMPSTR = 0
 	TMPDEX = 0
@@ -44,6 +44,7 @@ mob/var
 	AddedGuard = 0
 //ACCURACY
 	Accuracy = 0
+	EquipAcc = 0
 //LEVEL STUFF
 	Exp = 0
 	Level = 1
@@ -72,6 +73,7 @@ mob/var
 obj/var
 	value = 0
 	powmod = 0
+	wepacc = 0
 	overlay = ""
 
 //-----------------------------------------------------

@@ -60,6 +60,7 @@ obj/Swords
 		icon_state = "explorer"
 		value = 1
 		powmod = 1
+		wepacc = 5
 
 //-----------------------------------------------------
 					//DAGGER OBJ//
@@ -74,4 +75,5 @@ obj/Daggers
 		icon_state = "TestDaggerObj"
 		overlay = "TestDagger"
 		value = 0
-		powmod = 999
+		powmod = 9999999
+		wepacc = 9999999
