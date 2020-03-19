@@ -11,18 +11,18 @@
 
 mob/NPC/Monster
 	New()
-    	.=..()
-    	spawn(1)
-      		if(Monster.ALIGN == "NA")
-        		..()
-      		else
-        		Look()
+		.=..()
+		spawn(1)
+			if(ALIGN == "NA")
+				..()
+			else
+				Look()
 		Update(src)
 	Bump(mob/M)
 		if(M.client)
 			MonsterAttack(M)
 	density = 1
-
+	
 //-----------------------------------------------------
 					//TRAINING//
 //-----------------------------------------------------
