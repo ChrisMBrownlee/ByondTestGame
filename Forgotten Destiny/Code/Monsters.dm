@@ -32,7 +32,7 @@ mob/NPC/Monster
 		BlueSlime
 			name = "Blue Slime"
 			icon = 'Monsters.dmi'
-			icon_state = "blueslime"
+			icon_state = "BlueSlime"
 			HP = 15
 			Power = 3
 			Guard = 13
@@ -52,7 +52,7 @@ mob/NPC/Monster
 		RedSlime
 			name = "Red Slime"
 			icon = 'Monsters.dmi'
-			icon_state = "redslime"
+			icon_state = "RedSlime"
 			HP = 15
 			Power = 3
 			Guard = 13
@@ -72,7 +72,7 @@ mob/NPC/Monster
 		GreenSlime
 			name = "Green Slime"
 			icon = 'Monsters.dmi'
-			icon_state = "greenslime"
+			icon_state = "GreenSlime"
 			HP = 80
 			Power = 25
 			Guard = 13
