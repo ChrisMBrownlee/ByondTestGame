@@ -269,7 +269,7 @@ proc/AddWeapon(mob/M, obj/S)
 mob/proc/Accuracy()
 	var/DEX = usr.DEX
 	var/LUK = usr.LUK
-	var/ACC = usr.Accuracy
+	var/ACC = usr.EquipAcc
 	var/AccFormula = ((0.8 * DEX) + (0.5 * LUK) + (ACC))
 	var/LevelDiff = M.Level - usr.Level
 	var/MissRate
