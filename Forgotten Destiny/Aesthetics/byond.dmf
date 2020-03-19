@@ -739,11 +739,15 @@ window "mainwindow"
 		anchor2 = none
 		background-color = #333333
 		is-default = true
+		border = line
 		saved-params = "pos;size;is-maximized"
-		title = "3.5 simulator"
+		title = "Forgotten Destiny"
+		icon = 'PNGs\\IconSprite.png'
 		image-mode = center
 		macro = "macro"
 		menu = "menu"
+		outer-size = 656x518
+		inner-size = 640x459
 	elem "mainvsplit"
 		type = CHILD
 		pos = 3,0
@@ -814,6 +818,7 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
+		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -826,6 +831,7 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
+		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -838,6 +844,7 @@ window "mainwindow"
 		size = 23x20
 		anchor1 = 100,100
 		anchor2 = none
+		background-color = none
 		is-visible = false
 		border = line
 		saved-params = "is-checked"
@@ -1040,7 +1047,6 @@ window "team"
 		size = 640x480
 		anchor1 = none
 		anchor2 = none
-		background-color = none
 		saved-params = "pos;size;is-maximized"
 		title = "Team"
 		titlebar = false
@@ -1049,7 +1055,6 @@ window "team"
 		can-minimize = false
 		can-resize = false
 		is-pane = true
-		outer-size = 654x494
 	elem "teamchat"
 		type = OUTPUT
 		pos = 0,0
