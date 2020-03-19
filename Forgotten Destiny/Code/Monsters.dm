@@ -11,14 +11,44 @@
 
 mob/NPC/Monster
 	New()
-		.=..()
-		spawn(1)
-			Look()
+    	.=..()
+    	spawn(1)
+      		if(Monster.ALIGN == "NA")
+        		..()
+      		else
+        		Look()
 		Update(src)
 	Bump(mob/M)
 		if(M.client)
 			MonsterAttack(M)
 	density = 1
+
+//-----------------------------------------------------
+					//TRAINING//
+//-----------------------------------------------------
+
+	TrainingDummy
+
+//-----------------------------------------------------
+				//Training Dummy//
+//-----------------------------------------------------
+		TrainingDummy
+			name = "Training Dummy"
+			icon = 'Monsters.dmi'
+			icon_state = "Dummy"
+			HP = 100000000
+			MAXHP = 100000000
+			Power = 0
+			Guard = 0
+			Exp = 0
+			Level = 0
+			Gold = 0
+			ALIGN = "NA"
+			DropCorpse = 0
+			ATKSPD = 0
+			MOVSPD = 0
+			CA = 1
+
 
 //-----------------------------------------------------
 					//SLIMES//
@@ -41,7 +71,6 @@ mob/NPC/Monster
 			Level = 5
 			Gold = 3
 			ALIGN = "Neutral"
-			MAXHP = 80
 			DropCorpse = 0
 			ATKSPD = 10
 			MOVSPD = 20
