@@ -742,7 +742,7 @@ window "mainwindow"
 		border = line
 		saved-params = "pos;size;is-maximized"
 		title = "Forgotten Destiny"
-		icon = 'PNGs\\IconSprite.png'
+		icon = 'PNGs\\FD.png'
 		image-mode = center
 		macro = "macro"
 		menu = "menu"

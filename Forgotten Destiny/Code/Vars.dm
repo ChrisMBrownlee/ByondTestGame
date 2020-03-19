@@ -38,7 +38,7 @@ mob/var
 	MP = 10
 	MAXMP = 10
 //ATK / DEF
-	Power = 5
+	Power = 15
 	AddedPower = 0
 	Guard = 13
 	AddedGuard = 0

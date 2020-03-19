@@ -81,7 +81,7 @@ mob/proc/DoAttack()
 		for(var/mob/M as mob in X)
 			if(M == src)
 				continue
-			var/damage = rand(usr.Power - 3, usr.Power + 3)
+			var/damage = rand(usr.Power - 5, usr.Power + 5)
 			var/hit = rand(1, 100)
 			M.killlist += "[usr.name]"
 			if(hit <= 50)
