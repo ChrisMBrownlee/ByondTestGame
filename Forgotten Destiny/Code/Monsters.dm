@@ -67,5 +67,25 @@ mob/NPC/Monster
 			CA = 1
 
 //-----------------------------------------------------
+					//Green SLIME//
+//-----------------------------------------------------
+		RedSlime
+			name = "Green Slime"
+			icon = 'Monsters.dmi'
+			icon_state = "greenslime"
+			HP = 80
+			Power = 25
+			Guard = 13
+			Exp = 12
+			Level= 7
+			Gold = 10
+			ALIGN = "Neutral"
+			MAXHP = 80
+			DropCorpse = 0
+			ATKSPD = 5
+			MOVSPD = 10
+			CA = 1
+
+//-----------------------------------------------------
 					//NEW MONSTER//
 //-----------------------------------------------------
