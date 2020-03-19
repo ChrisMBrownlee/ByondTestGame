@@ -15,6 +15,7 @@
 #define FILE_DIR "Images/Weapons"
 #define FILE_DIR "PNGs"
 #define FILE_DIR "PNGs/GSlime"
+#define FILE_DIR "PNGs/RSlime"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES

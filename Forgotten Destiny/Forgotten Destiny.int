@@ -2,11 +2,11 @@
 /*
 MAP_ZOOM: 1.000
 LAST_COMPILE_TIME: 1584578256
-DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps 
+DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps PNGs PNGs\RSlime 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm;Images\Characters\Monsters.dmi
-FILE: Images\Characters\Monsters.dmi
+WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm;Images\Characters\Monsters.dmi;Maps\NewMapTest.dmm
+FILE: Maps\NewMapTest.dmm
 */
 // END_INTERNALS
