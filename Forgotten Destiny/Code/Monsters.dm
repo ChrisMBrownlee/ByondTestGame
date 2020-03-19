@@ -69,7 +69,7 @@ mob/NPC/Monster
 //-----------------------------------------------------
 					//Green SLIME//
 //-----------------------------------------------------
-		RedSlime
+		GreenSlime
 			name = "Green Slime"
 			icon = 'Monsters.dmi'
 			icon_state = "greenslime"
