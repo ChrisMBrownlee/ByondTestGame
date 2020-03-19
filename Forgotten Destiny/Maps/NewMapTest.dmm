@@ -9,6 +9,9 @@
 "i" = (/mob/NPC/Monster/Slime/BlueSlime,/turf/Floors/Grass,/area)
 "j" = (/obj/Daggers/TestDagger,/turf/Floors/Grass,/area)
 "k" = (/mob/NPC/Monster/Slime/GreenSlime,/turf/Floors/Grass,/area)
+"l" = (/mob/NPC/Monster/TrainingDummy,/turf/Floors/Grass,/area)
+"m" = (/mob/NPC/Monster/TrainingDummy/DummyE,/turf/Floors/Grass,/area)
+"n" = (/mob/NPC/Monster/TrainingDummy/DummyW,/turf/Floors/Grass,/area)
 
 (1,1,1) = {"
 dddddddddddddddddddddddddddddddddddddddddddddddddd
@@ -33,8 +36,8 @@ aaaaaaaaaaaaaaaaaaaaaadaakaaaaaaaaaaakaaaaaaaaakaa
 aaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaakaaaaaaaaakaaaaaaaaiaaaaaaaiaaaakaaaaaahaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaiaaaaaaaaaaaakaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaa
@@ -53,9 +56,9 @@ baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaakaaaaaaaaaa
-baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-baaaaaaaaaaaaaabaaaakaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-baaaaaaaaaaaaaabaaaaaaaaaaakaaaaaaaaaaaaaaaaaaaaia
+baaaaaaaaamaaanbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+baaaaaaaaamaaanbaaaakaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+baaaaaaaaamaaanbaaaaaaaaaaakaaaaaaaaaaaaaaaaaaaaia
 baaaaaaaaaaaaaabaaaaaaaaiaaaaaaaaaaaahaaaaaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaakaaaaaaaa
 baaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaahaaaa

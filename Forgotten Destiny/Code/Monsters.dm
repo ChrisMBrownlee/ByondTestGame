@@ -22,7 +22,7 @@ mob/NPC/Monster
 		if(M.client)
 			MonsterAttack(M)
 	density = 1
-	
+
 //-----------------------------------------------------
 					//TRAINING//
 //-----------------------------------------------------
@@ -30,12 +30,12 @@ mob/NPC/Monster
 	TrainingDummy
 
 //-----------------------------------------------------
-				//Training Dummy//
+				//Training Dummy West//
 //-----------------------------------------------------
-		TrainingDummy
+		DummyW
 			name = "Training Dummy"
 			icon = 'Monsters.dmi'
-			icon_state = "Dummy"
+			icon_state = "DummyW"
 			HP = 100000000
 			MAXHP = 100000000
 			Power = 0
@@ -49,6 +49,25 @@ mob/NPC/Monster
 			MOVSPD = 0
 			CA = 1
 
+//-----------------------------------------------------
+				//Training Dummy East//
+//-----------------------------------------------------
+		DummyE
+			name = "Training Dummy"
+			icon = 'Monsters.dmi'
+			icon_state = "DummyE"
+			HP = 100000000
+			MAXHP = 100000000
+			Power = 0
+			Guard = 0
+			Exp = 0
+			Level = 0
+			Gold = 0
+			ALIGN = "NA"
+			DropCorpse = 0
+			ATKSPD = 0
+			MOVSPD = 0
+			CA = 1
 
 //-----------------------------------------------------
 					//SLIMES//
