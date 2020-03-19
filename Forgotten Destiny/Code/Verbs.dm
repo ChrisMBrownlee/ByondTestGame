@@ -295,3 +295,32 @@ proc/AddWeapon(mob/M, obj/S)
 //dodge = (sqrt(DEX + 2 * LUK) - sqrt( Monster Accuracy ) - 2 * (MonsterLevel - CharacterLevel)) * (1 + Evasion% / 100)
 //if (dodge > .90)
 //  dodge = .90
+
+//Accuracy
+mob/proc/Accuracy()
+	var/DEX = usr.DEX
+	var/LUK = usr.LUK
+	var/ACC = usr.EquipAcc
+	var/AccFormula = ((0.8 * DEX) + (0.5 * LUK) + (ACC))
+	var/LevelDiff = M.Level - usr.Level
+	var/MissRate
+
+	if (LevelDiff >= 20)
+		MissRate = 100
+	else if (LevelDiff >= 15 && LevelDiff < 20)
+		MissRate = 98
+	else if (LevelDiff >= 10 && LevelDiff < 15)
+		MissRate = 96
+	else if (LevelDiff >= 5 && LevelDiff < 10)
+		MissRate = 94
+	else if (LevelDiff >= 0 && LevelDiff < 5)
+		MissRate = 100 - AccFormula
+	else
+		MissRate = 100 - (AccFormula * 2)
+
+	if (rand(1,100) <= MissRate)
+		return False
+	else
+		return True
+
+	
