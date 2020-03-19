@@ -42,6 +42,8 @@ mob/var
 	AddedPower = 0
 	Guard = 13
 	AddedGuard = 0
+//ACCURACY
+	Accuracy = 0
 //LEVEL STUFF
 	Exp = 0
 	Level = 1
