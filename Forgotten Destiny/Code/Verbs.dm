@@ -106,15 +106,15 @@ mob/proc/Accuracy(mob/M)
 	var/LevelDiff = M.Level - usr.Level
 	var/MissRate
 	
-	if (LevelDiff >= 20)
+	if (LevelDiff > 20)
 		MissRate = 100
-	else if (LevelDiff >= 15 && LevelDiff < 20)
+	else if (LevelDiff > 15 && LevelDiff <= 20)
 		MissRate = 98
-	else if (LevelDiff >= 10 && LevelDiff < 15)
+	else if (LevelDiff > 10 && LevelDiff <= 15)
 		MissRate = 96
-	else if (LevelDiff >= 5 && LevelDiff < 10)
+	else if (LevelDiff > 5 && LevelDiff <= 10)
 		MissRate = 94
-	else if (LevelDiff >= 0 && LevelDiff < 5)
+	else if (LevelDiff <= 5)
 		MissRate = 100 - AccFormula
 	
 	if (rand(1,100) <= MissRate)
