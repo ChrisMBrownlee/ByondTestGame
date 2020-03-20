@@ -82,7 +82,7 @@ mob/proc/DoAttack()
 			if(M == src)
 				continue
 			var/damage = rand(usr.Power - 5, usr.Power + 5)
-			var/hit = Accuracy(src)
+			var/hit = Accuracy(M)
 			M.killlist += "[usr.name]"
 			if(hit == "true")
 				src << "You attack [M] for [damage] damage!"
@@ -102,13 +102,11 @@ mob/proc/DoAttack()
 //-----------------------------------------------------
 
 mob/proc/Accuracy(mob/M)
-	var/DEX = usr.DEX
-	var/LUK = usr.LUK
-	var/ACC = usr.Accuracy
-	var/AccFormula = ((0.8 * DEX) + (0.5 * LUK) + (ACC))
+	var/AccFormula = ((0.8 * src.DEX) + (0.5 * src.LUK) + (src.EquipAcc) + (M.Evasion * -1))
 	var/LevelDiff = M.Level - usr.Level
 	var/MissRate
-
+	
+	world << "[AccFormula]"
 	if (LevelDiff >= 20)
 		MissRate = 100
 	else if (LevelDiff >= 15 && LevelDiff < 20)
@@ -119,9 +117,7 @@ mob/proc/Accuracy(mob/M)
 		MissRate = 94
 	else if (LevelDiff >= 0 && LevelDiff < 5)
 		MissRate = 100 - AccFormula
-	else
-		MissRate = 100 - (AccFormula * 2)
-
+	
 	if (rand(1,100) <= MissRate)
 		return "false"
 	else

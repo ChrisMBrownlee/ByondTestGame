@@ -40,6 +40,7 @@ mob/NPC/Monster
 			MAXHP = 100000000
 			Power = 0
 			Guard = 0
+			Evasion = -50
 			Exp = 0
 			Level = 0
 			Gold = 0
@@ -60,6 +61,7 @@ mob/NPC/Monster
 			MAXHP = 100000000
 			Power = 0
 			Guard = 0
+			Evasion = -50
 			Exp = 0
 			Level = 0
 			Gold = 0
@@ -68,6 +70,7 @@ mob/NPC/Monster
 			ATKSPD = 0
 			MOVSPD = 0
 			CA = 1
+
 
 //-----------------------------------------------------
 					//SLIMES//
@@ -86,6 +89,7 @@ mob/NPC/Monster
 			MAXHP = 80
 			Power = 3
 			Guard = 13
+			Evasion = 0
 			Exp = 8
 			Level = 5
 			Gold = 3
@@ -106,6 +110,7 @@ mob/NPC/Monster
 			MAXHP = 80
 			Power = 3
 			Guard = 13
+			Evasion = 0
 			Exp = 8
 			Level= 5
 			Gold = 3
@@ -126,6 +131,7 @@ mob/NPC/Monster
 			MAXHP = 80
 			Power = 25
 			Guard = 13
+			Evasion = 0
 			Exp = 8
 			Level= 7
 			Gold = 10

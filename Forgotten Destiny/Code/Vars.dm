@@ -43,6 +43,7 @@ mob/var
 	Guard = 13
 	AddedGuard = 0
 //ACCURACY
+	Evasion = 10
 	Accuracy = 0
 	EquipAcc = 0
 //LEVEL STUFF

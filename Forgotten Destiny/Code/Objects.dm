@@ -23,6 +23,7 @@ obj
 			if(usr.weapon_equipped == 0)
 				usr.Power += src.powmod
 				usr.weapon_equipped = 1
+				usr.EquipAcc += src.wepacc
 				AddWeapon(usr, src)
 				usr << "You equip [src.name]."
 			else
@@ -32,6 +33,7 @@ obj
 			if(usr.weapon_equipped == 1)
 				usr.Power -= src.powmod
 				usr.weapon_equipped = 0
+				usr.EquipAcc -= src.wepacc
 				usr << "You unequipped [src.name]."
 			else
 				usr << "You're not weilding anything."
