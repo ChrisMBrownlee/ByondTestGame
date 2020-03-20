@@ -106,7 +106,6 @@ mob/proc/Accuracy(mob/M)
 	var/LevelDiff = M.Level - usr.Level
 	var/MissRate
 	
-	world << "[AccFormula]"
 	if (LevelDiff >= 20)
 		MissRate = 100
 	else if (LevelDiff >= 15 && LevelDiff < 20)
