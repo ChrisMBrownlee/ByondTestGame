@@ -40,7 +40,7 @@ mob/NPC/Monster
 			MAXHP = 100000000
 			Power = 0
 			Guard = 0
-			Evasion = -50
+			Evasion = -100
 			Exp = 0
 			Level = 0
 			Gold = 0
@@ -61,7 +61,7 @@ mob/NPC/Monster
 			MAXHP = 100000000
 			Power = 0
 			Guard = 0
-			Evasion = -50
+			Evasion = -100
 			Exp = 0
 			Level = 0
 			Gold = 0
