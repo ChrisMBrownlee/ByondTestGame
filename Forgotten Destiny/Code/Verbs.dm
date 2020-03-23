@@ -105,7 +105,7 @@ mob/proc/Accuracy(mob/M)
 	var/AccFormula = ((0.8 * src.DEX) + (0.5 * src.LUK) + (src.EquipAcc) + (M.Evasion * -1))
 	var/LevelDiff = M.Level - usr.Level
 	var/MissRate
-	
+
 	if (LevelDiff > 20)
 		MissRate = 100
 	else if (LevelDiff > 15 && LevelDiff <= 20)
@@ -116,7 +116,7 @@ mob/proc/Accuracy(mob/M)
 		MissRate = 94
 	else if (LevelDiff <= 5)
 		MissRate = 100 - AccFormula
-	
+
 	if (rand(1,100) <= MissRate)
 		return "false"
 	else
@@ -290,8 +290,9 @@ proc/AddWeapon(mob/M, obj/S)
 proc/verb/Dodge(mob/M)
 	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Accuracy ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
 
-	if (dodge > (.90))
-		return(.90)
+	if (dodge > (0.90))
+		var/tmp/max = 0.90
+		return(max)
 	else
 		return(dodge)
 
