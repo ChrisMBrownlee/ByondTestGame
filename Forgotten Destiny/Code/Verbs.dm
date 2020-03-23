@@ -295,7 +295,17 @@ proc/verb/Dodge(mob/M)
 	else
 		return(dodge)
 
-// Save File Setup Attempt
+// Save/Load File Setup Attempt
+mob/Login()
+   SaveFile.cd = "/"  //make sure we are at the root
+   if(ckey in SaveFile.dir)
+      SaveFile.cd = ckey
+      Read(SaveFile)
+      usr << "Welcome back, [name]!"
+   else
+      usr << "Welcome, [name]!"
+   ..()
+
 mob/Logout()
 	var/savefile/F = new(ckey)
 	Write(F)
