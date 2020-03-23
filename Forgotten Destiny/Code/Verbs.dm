@@ -287,10 +287,15 @@ proc/AddWeapon(mob/M, obj/S)
 	M.underlays += image("[temp]" , icon_state = "[S.overlay]", layer = S.layer)
 
 // DODGE SETUP ATTEMPT
-proc/verb/Dodge()
+proc/verb/Dodge(mob/M)
 	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Acc ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
 
-	if (dodge > .90)
+	if (dodge > (.90))
 		return(.90)
 	else
 		return(dodge)
+
+// Save File Setup Attempt
+mob/Logout()
+	var/savefile/F = new(ckey)
+	Write(F)
