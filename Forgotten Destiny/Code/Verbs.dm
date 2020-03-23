@@ -286,7 +286,11 @@ proc/AddWeapon(mob/M, obj/S)
 	world << "[temp]"
 	M.underlays += image("[temp]" , icon_state = "[S.overlay]", layer = S.layer)
 
-// DODGE VERB REWORK BELOW
-//dodge = (sqrt(DEX + 2 * LUK) - sqrt( Monster Accuracy ) - 2 * (MonsterLevel - CharacterLevel)) * (1 + Evasion% / 100)
-//if (dodge > .90)
-//  dodge = .90
+// DODGE SETUP ATTEMPT
+proc/verb/Dodge()
+	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Acc ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
+
+	if (dodge > .90)
+		return(.90)
+	else
+		return(dodge)
