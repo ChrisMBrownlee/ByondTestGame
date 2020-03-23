@@ -41,7 +41,7 @@ mob/NPC/Monster
 			Power = 0
 			Guard = 0
 			Evasion = -100
-			Acc = 0
+			Accuracy = 0
 			Exp = 0
 			Level = 0
 			Gold = 0
@@ -63,7 +63,7 @@ mob/NPC/Monster
 			Power = 0
 			Guard = 0
 			Evasion = -100
-			Acc = 0
+			Accuracy = 0
 			Exp = 0
 			Level = 0
 			Gold = 0
@@ -92,7 +92,7 @@ mob/NPC/Monster
 			Power = 3
 			Guard = 13
 			Evasion = 0
-			Acc = 5
+			Accuracy = 5
 			Exp = 8
 			Level = 5
 			Gold = 3
@@ -114,7 +114,7 @@ mob/NPC/Monster
 			Power = 3
 			Guard = 13
 			Evasion = 0
-			Acc = 5
+			Accuracy = 5
 			Exp = 8
 			Level= 5
 			Gold = 3
@@ -136,7 +136,7 @@ mob/NPC/Monster
 			Power = 25
 			Guard = 13
 			Evasion = 0
-			Acc = 5
+			Accuracy = 5
 			Exp = 8
 			Level= 7
 			Gold = 10
