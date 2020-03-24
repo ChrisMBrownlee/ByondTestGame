@@ -287,26 +287,27 @@ proc/AddWeapon(mob/M, obj/S)
 	M.underlays += image("[temp]" , icon_state = "[S.overlay]", layer = S.layer)
 
 // DODGE SETUP ATTEMPT
-proc/verb/Dodge(mob/M)
+mob/proc/Dodge(mob/M)
 	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Accuracy ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
 
 	if (dodge > (0.90))
 		var/tmp/max = 0.90
-		return(max)
+		return max
 	else
-		return(dodge)
+		return dodge
 
 // Save/Load File Setup Attempt
-mob/Login()
-   SaveFile.cd = "/"  //make sure we are at the root
-   if(ckey in SaveFile.dir)
-      SaveFile.cd = ckey
-      Read(SaveFile)
-      usr << "Welcome back, [name]!"
-   else
-      usr << "Welcome, [name]!"
-   ..()
+mob/proc/LoginPlayer()
+	var/savefile/SF = new(ckey)
+	SF.cd = "/" //make sure we are at the root
+	if(ckey in SF.dir)
+		SF.cd = ckey
+		Read(SF)
+		usr << "Welcome back, [usr.name]!"
+	else
+		usr << "Welcome, [usr.name], enjoy your new adventure!"
+	..()
 
-mob/Logout()
+mob/proc/LogoutPlayer()
 	var/savefile/F = new(ckey)
 	Write(F)

@@ -6,7 +6,7 @@ DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm;Images\Characters\Monsters.dmi;Maps\NewMapTest.dmm;PNGs\TD-Left.png;PNGs\TD-Right.png
+WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm
 FILE: Code\Verbs.dm
 */
 // END_INTERNALS
