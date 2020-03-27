@@ -309,16 +309,16 @@ mob/proc/LoginPlayer()
 		var/savefile/F = new("PlayerData/[ckey].txt")
 		usr << "Welcome back, [usr.name], enjoy your adventure!"
 		UpdatePlayer()
-		F >> usr.Level
-		F >> usr.HP
-		F >> usr.MAXHP
-		F >> usr.MP
-		F >> usr.MAXMP
-		F >> usr.Exp
-		F >> usr.Gold
-		F >> usr.x
-		F >> usr.y
-		F >> usr.z
+		F["level"] >> usr.Level
+		F["hp"] >> usr.HP
+		F["maxhp"] >> usr.MAXHP
+		F["mp"] >> usr.MP
+		F["maxmp"] >> usr.MAXMP
+		F["exp"] >> usr.Exp
+		F["gold"] >> usr.Gold
+		F["saved_x"] >> usr.x
+		F["saved_y"] >> usr.y
+		F["saved_z"] >> usr.z
 	else
 		//MAKE NEW PLAYER
 		usr << "Welcome, [usr.name], enjoy your new adventure!"
@@ -330,16 +330,16 @@ mob/proc/LoginPlayer()
 
 mob/proc/LogoutPlayer()
 	var/savefile/F = new("PlayerData/[ckey].txt")
-	F << "[usr.Level]"
-	F << usr.HP
-	F << usr.MAXHP
-	F << usr.MP
-	F << usr.MAXMP
-	F << usr.Exp
-	F << usr.Gold
-	F << usr.x
-	F << usr.y
-	F << usr.z
+	F["level"] << usr.Level
+	F["hp"] << usr.HP
+	F["maxhp"] << usr.MAXHP
+	F["mp"] << usr.MP
+	F["maxmp"] << usr.MAXMP
+	F["exp"] << usr.Exp
+	F["gold"] << usr.Gold
+	F["saved_x"] << usr.x
+	F["saved_y"] << usr.y
+	F["saved_z"] << usr.z
 
 mob/proc/UpdatePlayer()
 	if(usr.Gender == "Male")
