@@ -19,9 +19,6 @@ mob/var
 	DEX = 5
 	INT = 5
 	LUK = 5
-	CON = 5
-	CHA = 5
-	FTH = 5
 //TEMP STATS
 	TMPSTR = 0
 	TMPDEX = 0

@@ -237,15 +237,12 @@ mob/proc/BumpStats(mob/Player)
 //TODO: Make formula for stat gains
 	//BUMP STATS FIRST
 	Player.STR += (5)
-	Player.CON += (5)
 	Player.INT += (5)
-	Player.CHA += (5)
 	Player.DEX += (5)
-	Player.FTH += (5)
 	Player.LUK += (5)
 	//THEN FORMULATE FOR MISC STATS
 	Player.Power += (5)
-	Player.MAXHP += (5 + Player.CON)
+	Player.MAXHP += (5 + Player.STR)
 	Player.MAXMP += (5 + Player.INT)
 	view() << "[Player] Leveled Up!"
 	//TODO: PLAY LEVEL UP DING
@@ -349,8 +346,8 @@ mob/verb/Meditate()
 			if(usr.HP > usr.MAXHP)
 				usr.HP = usr.MAXHP
 			else
-				usr << "You restore [usr.CON] HP"
-				usr.HP += usr.CON
+				usr << "You restore [usr.STR] HP"
+				usr.HP += usr.STR
 		if(usr.MP != usr.MAXMP)
 			if(usr.MP > usr.MAXMP)
 				usr.MP = usr.MAXMP
