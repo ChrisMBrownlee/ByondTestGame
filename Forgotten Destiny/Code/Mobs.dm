@@ -16,20 +16,7 @@ mob/usr
 //-----------------------------------------------------
 
 	Login()
-		if(usr.Gender == "Male")
-			icon_state = "Male"
-		else
-			icon_state = "Female"
-
-		if(key in God)
-			world << "The Deity, [src], has blessed you with their presence."
-			src.loc = locate(/turf/Start)
-		else if(key in Admin)
-			world << "The Admin, [src], has blessed you with their presence."
-			src.loc = locate(/turf/Start)
-		else
-			world << "[src] has joined the world."
-		src.loc = locate(/turf/Start)
+		LoginPlayer()
 		..()
 
 //-----------------------------------------------------
@@ -38,6 +25,7 @@ mob/usr
 
 	Logout()
 		world << "[src] has left the world."
+		LogoutPlayer()
 		del(src)
 		..()
 

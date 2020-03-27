@@ -298,16 +298,44 @@ mob/proc/Dodge(mob/M)
 
 // Save/Load File Setup Attempt
 mob/proc/LoginPlayer()
-	var/savefile/SF = new(ckey)
-	SF.cd = "/" //make sure we are at the root
-	if(ckey in SF.dir)
-		SF.cd = ckey
-		Read(SF)
-		usr << "Welcome back, [usr.name]!"
+	if(key in God)
+		world << "The Deity, [src], has blessed you with their presence."
+	else if(key in Admin)
+		world << "The Admin, [src], has blessed you with their presence."
 	else
+		world << "[src] has joined the world."
+	if(fexists("PlayerData/[ckey].sav"))
+		//DO PLAYER LOAD
+		var/savefile/F = new("PlayerData/[ckey].sav")
+		usr << "Welcome back, [usr.name], enjoy your adventure!"
+		UpdatePlayer()
+		F >> usr.Level
+		F >> usr.Exp
+		F >> usr.Gold
+		F >> usr.x
+		F >> usr.y
+		F >> usr.z
+	else
+		//MAKE NEW PLAYER
 		usr << "Welcome, [usr.name], enjoy your new adventure!"
+		src.loc = locate(/turf/Start)
+		var/savefile/S = new("PlayerData/[ckey].sav")
+		//CHANGE THIS FOR PLAYER SETUP
+		UpdatePlayer()
 	..()
 
 mob/proc/LogoutPlayer()
-	var/savefile/F = new(ckey)
-	Write(F)
+	var/savefile/F = new("PlayerData/[ckey].sav")
+	F << usr.Level
+	F << usr.Exp
+	F << usr.Gold
+	F << usr.x
+	F << usr.y
+	F << usr.z
+
+mob/proc/UpdatePlayer()
+	if(usr.Gender == "Male")
+		icon_state = "Male"
+	else
+		icon_state = "Female"
+	return

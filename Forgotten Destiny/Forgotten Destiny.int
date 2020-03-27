@@ -1,12 +1,12 @@
 // BEGIN_INTERNALS
 /*
 MAP_ZOOM: 1.000
-LAST_COMPILE_TIME: 1584657660
+LAST_COMPILE_TIME: 1585268557
 DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps PNGs PNGs\GSlime PNGs\RSlime 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Code\World.dm;Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm;Images\Characters\Monsters.dmi;Images\Characters\Player.dmi;Images\Characters\Eyes.dmi
-FILE: Images\Characters\Eyes.dmi
+WINDOW: Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Images\Weapons\Rogue Weapons.dmi;Code\Admin.dm;Code\Atoms.dm;Images\Characters\Monsters.dmi;Images\Characters\Player.dmi;Images\Characters\Eyes.dmi
+FILE: Code\Verbs.dm
 */
 // END_INTERNALS
