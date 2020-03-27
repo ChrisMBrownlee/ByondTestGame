@@ -8,6 +8,7 @@
 
 mob/var
 //USER IMAGES
+	Eyes = ""
 	Hair = ""
 	Weapon = ""
 	Armor = ""

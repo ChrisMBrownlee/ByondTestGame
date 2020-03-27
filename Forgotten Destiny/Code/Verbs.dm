@@ -310,6 +310,10 @@ mob/proc/LoginPlayer()
 		usr << "Welcome back, [usr.name], enjoy your adventure!"
 		UpdatePlayer()
 		F >> usr.Level
+		F >> usr.HP
+		F >> usr.MAXHP
+		F >> usr.MP
+		F >> usr.MAXMP
 		F >> usr.Exp
 		F >> usr.Gold
 		F >> usr.x
@@ -327,6 +331,10 @@ mob/proc/LoginPlayer()
 mob/proc/LogoutPlayer()
 	var/savefile/F = new("PlayerData/[ckey].sav")
 	F << usr.Level
+	F << usr.HP
+	F << usr.MAXHP
+	F << usr.MP
+	F << usr.MAXMP
 	F << usr.Exp
 	F << usr.Gold
 	F << usr.x
