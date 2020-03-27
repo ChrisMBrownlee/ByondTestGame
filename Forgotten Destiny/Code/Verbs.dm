@@ -304,9 +304,9 @@ mob/proc/LoginPlayer()
 		world << "The Admin, [src], has blessed you with their presence."
 	else
 		world << "[src] has joined the world."
-	if(fexists("PlayerData/[ckey].sav"))
+	if(fexists("PlayerData/[ckey].txt"))
 		//DO PLAYER LOAD
-		var/savefile/F = new("PlayerData/[ckey].sav")
+		var/savefile/F = new("PlayerData/[ckey].txt")
 		usr << "Welcome back, [usr.name], enjoy your adventure!"
 		UpdatePlayer()
 		F >> usr.Level
@@ -323,14 +323,14 @@ mob/proc/LoginPlayer()
 		//MAKE NEW PLAYER
 		usr << "Welcome, [usr.name], enjoy your new adventure!"
 		src.loc = locate(/turf/Start)
-		var/savefile/S = new("PlayerData/[ckey].sav")
+		var/savefile/S = new("PlayerData/[ckey].txt")
 		//CHANGE THIS FOR PLAYER SETUP
 		UpdatePlayer()
 	..()
 
 mob/proc/LogoutPlayer()
-	var/savefile/F = new("PlayerData/[ckey].sav")
-	F << usr.Level
+	var/savefile/F = new("PlayerData/[ckey].txt")
+	F << "[usr.Level]"
 	F << usr.HP
 	F << usr.MAXHP
 	F << usr.MP
