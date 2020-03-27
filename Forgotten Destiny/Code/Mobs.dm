@@ -9,7 +9,6 @@ mob/usr
 //-----------------------------------------------------
 
 	icon = 'Player.dmi'
-//	winset(client, "default", "title = \"Forgotten Destiny\"")
 
 //-----------------------------------------------------
 					//LOG IN//

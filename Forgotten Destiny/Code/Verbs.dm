@@ -259,6 +259,85 @@ mob/proc/GetGold(mob/M, mob/Player)
 	usr << "[M] dropped [M.Gold] Gold!"
 
 //-----------------------------------------------------
+					//DODGE VERBS//
+//-----------------------------------------------------
+
+mob/proc/Dodge(mob/M)
+	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Accuracy ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
+
+	if (dodge > (0.90))
+		var/tmp/max = 0.90
+		return max
+	else
+		return dodge
+
+//-----------------------------------------------------
+					//LOAD/LOGIN VERBS//
+//-----------------------------------------------------
+
+mob/proc/LoginPlayer()
+	if(key in God)
+		world << "The Deity, [src], has blessed you with their presence."
+	else if(key in Admin)
+		world << "The Admin, [src], has blessed you with their presence."
+	else
+		world << "[src] has joined the world."
+	if(fexists("PlayerData/[ckey].txt"))
+		//DO PLAYER LOAD
+		var/savefile/F = new("PlayerData/[ckey].txt")
+		usr << "Welcome back, [usr.name], enjoy your adventure!"
+		F["level"] >> usr.Level
+		F["hp"] >> usr.HP
+		F["maxhp"] >> usr.MAXHP
+		F["mp"] >> usr.MP
+		F["maxmp"] >> usr.MAXMP
+		F["exp"] >> usr.Exp
+		F["gold"] >> usr.Gold
+		F["saved_x"] >> usr.x
+		F["saved_y"] >> usr.y
+		F["saved_z"] >> usr.z
+		F["inv_list"] >> usr.contents
+		F["gender"] >> usr.Gender
+		//UPDATE PLAYER IMAGE AFTER LOADING
+		UpdatePlayerIMG()
+	else
+		//MAKE NEW PLAYER
+		usr << "Welcome, [usr.name], enjoy your new adventure!"
+		src.loc = locate(/turf/Start)
+		//CHANGE THIS FOR PLAYER SETUP
+		UpdatePlayerIMG()
+	..()
+
+//-----------------------------------------------------
+					//SAVE/LOGOUT VERBS//
+//-----------------------------------------------------
+mob/proc/LogoutPlayer()
+	var/savefile/F = new("PlayerData/[ckey].txt")
+	F["level"] << usr.Level
+	F["hp"] << usr.HP
+	F["maxhp"] << usr.MAXHP
+	F["mp"] << usr.MP
+	F["maxmp"] << usr.MAXMP
+	F["exp"] << usr.Exp
+	F["gold"] << usr.Gold
+	F["saved_x"] << usr.x
+	F["saved_y"] << usr.y
+	F["saved_z"] << usr.z
+	F["inv_list"] << usr.contents
+	F["gender"] << usr.Gender
+
+//-----------------------------------------------------
+					//UPDATE PLAYER IMG VERBS//
+//-----------------------------------------------------
+
+mob/proc/UpdatePlayerIMG()
+	if(usr.Gender == "Male")
+		usr.overlays += image('Player.dmi', icon_state = "Male", layer = 2.1)
+	else
+		usr.overlays += image('Player.dmi', icon_state = "Female", layer = 2.1)
+	return
+
+//-----------------------------------------------------
 					//TEST VERBS//
 //-----------------------------------------------------
 
@@ -282,68 +361,4 @@ mob/verb/Meditate()
 	usr << "You stop meditating"
 
 proc/AddWeapon(mob/M, obj/S)
-	var/temp = S.icon
-	world << "[temp]"
-	M.underlays += image("[temp]" , icon_state = "[S.overlay]", layer = S.layer)
-
-// DODGE SETUP ATTEMPT
-mob/proc/Dodge(mob/M)
-	var/dodge = (sqrt(usr.DEX + 2 * usr.LUK) - sqrt( M.Accuracy ) - 2 * (M.Level - usr.Level)) * (1 + usr.Evasion / 100)
-
-	if (dodge > (0.90))
-		var/tmp/max = 0.90
-		return max
-	else
-		return dodge
-
-// Save/Load File Setup Attempt
-mob/proc/LoginPlayer()
-	if(key in God)
-		world << "The Deity, [src], has blessed you with their presence."
-	else if(key in Admin)
-		world << "The Admin, [src], has blessed you with their presence."
-	else
-		world << "[src] has joined the world."
-	if(fexists("PlayerData/[ckey].txt"))
-		//DO PLAYER LOAD
-		var/savefile/F = new("PlayerData/[ckey].txt")
-		usr << "Welcome back, [usr.name], enjoy your adventure!"
-		UpdatePlayer()
-		F["level"] >> usr.Level
-		F["hp"] >> usr.HP
-		F["maxhp"] >> usr.MAXHP
-		F["mp"] >> usr.MP
-		F["maxmp"] >> usr.MAXMP
-		F["exp"] >> usr.Exp
-		F["gold"] >> usr.Gold
-		F["saved_x"] >> usr.x
-		F["saved_y"] >> usr.y
-		F["saved_z"] >> usr.z
-	else
-		//MAKE NEW PLAYER
-		usr << "Welcome, [usr.name], enjoy your new adventure!"
-		src.loc = locate(/turf/Start)
-		var/savefile/S = new("PlayerData/[ckey].txt")
-		//CHANGE THIS FOR PLAYER SETUP
-		UpdatePlayer()
-	..()
-
-mob/proc/LogoutPlayer()
-	var/savefile/F = new("PlayerData/[ckey].txt")
-	F["level"] << usr.Level
-	F["hp"] << usr.HP
-	F["maxhp"] << usr.MAXHP
-	F["mp"] << usr.MP
-	F["maxmp"] << usr.MAXMP
-	F["exp"] << usr.Exp
-	F["gold"] << usr.Gold
-	F["saved_x"] << usr.x
-	F["saved_y"] << usr.y
-	F["saved_z"] << usr.z
-
-mob/proc/UpdatePlayer()
-	if(usr.Gender == "Male")
-		icon_state = "Male"
-	else
-		icon_state = "Female"
-	return
+	M.underlays += image(S.icon , icon_state = "[S.overlay]", layer = S.layer)
