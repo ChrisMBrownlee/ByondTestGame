@@ -3,7 +3,7 @@
 //-----------------------------------------------------
 
 obj
-	layer = 2.2
+	layer = 2.9
 
 //-----------------------------------------------------
 					//OBJ VERBS//
@@ -55,8 +55,6 @@ obj/Misc
 //-----------------------------------------------------
 
 obj/Swords
-	layer = 2.2
-
 	ExplorerSword
 		name = "Explorer Sword"
 		icon = 'Warrior Weapons.dmi'
@@ -70,8 +68,6 @@ obj/Swords
 //-----------------------------------------------------
 
 obj/Daggers
-	layer = 2.2
-
 	TestDagger
 		name = "Admin Dagger"
 		icon = 'Rogue Weapons.dmi'
