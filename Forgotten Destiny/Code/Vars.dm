@@ -24,9 +24,6 @@ mob/var
 	TMPDEX = 0
 	TMPINT = 0
 	TMPLUK = 0
-	TMPCON = 0
-	TMPCHA = 0
-	TMPFTH = 0
 //HELD POINTS
 	RemainingAP = 0
 	RemainingSP = 0

@@ -299,6 +299,10 @@ mob/proc/LoginPlayer()
 		F["int"] >> usr.INT
 		F["dex"] >> usr.DEX
 		F["luk"] >> usr.LUK
+		F["tmpstr"] >> usr.TMPSTR
+		F["tmpint"] >> usr.TMPINT
+		F["tmpdex"] >> usr.TMPDEX
+		F["tmpluk"] >> usr.TMPLUK
 		F["AP"] >> usr.RemainingAP
 		F["SP"] >> usr.RemainingSP
 		//UPDATE PLAYER IMAGE AFTER LOADING
@@ -332,6 +336,10 @@ mob/proc/LogoutPlayer()
 	F["int"] << usr.INT
 	F["dex"] << usr.DEX
 	F["luk"] << usr.LUK
+	F["tmpstr"] << usr.TMPSTR
+	F["tmpint"] << usr.TMPINT
+	F["tmpdex"] << usr.TMPDEX
+	F["tmpluk"] << usr.TMPLUK
 	F["AP"] << usr.RemainingAP
 	F["SP"] << usr.RemainingSP
 
