@@ -295,6 +295,12 @@ mob/proc/LoginPlayer()
 		F["saved_z"] >> usr.z
 		F["inv_list"] >> usr.contents
 		F["gender"] >> usr.Gender
+		F["str"] >> usr.STR
+		F["int"] >> usr.INT
+		F["dex"] >> usr.DEX
+		F["luk"] >> usr.LUK
+		F["AP"] >> usr.RemainingAP
+		F["SP"] >> usr.RemainingSP
 		//UPDATE PLAYER IMAGE AFTER LOADING
 		UpdatePlayerIMG()
 	else
@@ -322,6 +328,12 @@ mob/proc/LogoutPlayer()
 	F["saved_z"] << usr.z
 	F["inv_list"] << usr.contents
 	F["gender"] << usr.Gender
+	F["str"] << usr.STR
+	F["int"] << usr.INT
+	F["dex"] << usr.DEX
+	F["luk"] << usr.LUK
+	F["AP"] << usr.RemainingAP
+	F["SP"] << usr.RemainingSP
 
 //-----------------------------------------------------
 					//UPDATE PLAYER IMG VERBS//
