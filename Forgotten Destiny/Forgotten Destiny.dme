@@ -16,6 +16,7 @@
 #define FILE_DIR "PNGs"
 #define FILE_DIR "PNGs/GSlime"
 #define FILE_DIR "PNGs/RSlime"
+#define FILE_DIR "Unused Icons"
 // END_FILE_DIR
 
 // BEGIN_PREFERENCES

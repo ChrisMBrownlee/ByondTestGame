@@ -34,27 +34,12 @@ mob/usr/Stat()
 			stat("Guard:", "[usr.Guard]([usr.AddedGuard])")
 		stat("Experience:", "[usr.Exp]/[explist[usr.Level]]")
 		stat("Gold:", "[usr.Gold]")
-
-//-----------------------------------------------------
-					//STATS TAB//
-//-----------------------------------------------------
-
-	statpanel("Stats")
-	if(usr.client.statpanel == "Stats")
-		stat("Level:", "[usr.Level]")
-		stat("Class:", "[usr.Class]")
-		stat("Health:", "[usr.HP]/[usr.MAXHP]")
-		stat("Mana:", "[usr.MP]/[usr.MAXMP]")
-		stat("")
 		stat("-----===== Ability Stats =====-----")
 		if(usr.RemainingAP == 0)
 			stat("Str:","[usr.STR]")
 			stat("Dex:","[usr.DEX]")
-			stat("Con:","[usr.CON]")
 			stat("Int:","[usr.INT]")
-			stat("Cha:","[usr.CHA]")
 			stat("Luk:","[usr.LUK]")
-			stat("Fth:","[usr.FTH]")
 		else
 			if(usr.TMPSTR > 0)
 				stat("Strength:","[usr.STR] (+ [usr.TMPSTR])")

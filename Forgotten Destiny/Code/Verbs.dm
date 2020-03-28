@@ -378,4 +378,4 @@ mob/verb/Meditate()
 	usr << "You stop meditating"
 
 proc/AddWeapon(mob/M, obj/S)
-	M.underlays += image(S.icon , icon_state = "[S.overlay]", layer = S.layer)
+	M.underlays += image(S.icon , icon_state = "[S.overlay]", layer = S.equiplayer)
