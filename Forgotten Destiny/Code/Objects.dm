@@ -72,8 +72,8 @@ obj/Daggers
 	TestDagger
 		name = "Admin Dagger"
 		icon = 'Rogue Weapons.dmi'
-		icon_state = "TestDaggerObj"
-		overlay = "TestDagger"
+		icon_state = "AdminDaggerObj"
+		overlay = "AdminDagger"
 		value = 0
 		powmod = 9999999
 		wepacc = 9999999

@@ -2,11 +2,11 @@
 /*
 MAP_ZOOM: 1.000
 LAST_COMPILE_TIME: 1585421562
-DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps PNGs PNGs\GSlime PNGs\RSlime Unused Icons Lib 
+DIR: Aesthetics Code Images Images\Armors Images\Characters Images\Environments Images\Misc Images\Weapons Maps PNGs PNGs\GSlime PNGs\RSlime Unused Icons 
 AUTO_FILE_DIR: ON
 MAP_ICON_TYPE: 0
 LAST_COMPILE_VERSION: 513.1512
-WINDOW: Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Code\Admin.dm;Code\Tabs.dm;Images\Characters\Eyes.dmi;Images\Environments\Walls.dmi;Unused Icons\Wall.dmi
-FILE: Unused Icons\Wall.dmi
+WINDOW: Code\Verbs.dm;Code\Vars.dm;Code\Objects.dm;Code\Mobs.dm;Code\Monsters.dm;Code\Turfs.dm;Code\Admin.dm;Code\Tabs.dm;Images\Characters\Eyes.dmi;Images\Environments\Walls.dmi;Unused Icons\Wall.dmi;Images\Weapons\Rogue Weapons.dmi
+FILE: Images\Weapons\Rogue Weapons.dmi
 */
 // END_INTERNALS
