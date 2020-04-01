@@ -130,7 +130,7 @@ mob/proc/Accuracy(mob/M)
 mob/proc/Look()
 	var/mob/usr/Player
 	while(src)
-		if(Player in oview(6))
+		if(Player in oview(7))
 			if(src.ALIGN == "Evil")
 				walk_to(src, Player, 1, 4)
 				if(Player in oview(1))
@@ -306,6 +306,7 @@ mob/proc/LoginPlayer()
 		F["tmpluk"] >> usr.TMPLUK
 		F["AP"] >> usr.RemainingAP
 		F["SP"] >> usr.RemainingSP
+		F["respawn"] >> usr.respawn
 		//UPDATE PLAYER IMAGE AFTER LOADING
 		UpdatePlayerIMG()
 	else
@@ -314,6 +315,7 @@ mob/proc/LoginPlayer()
 		src.loc = locate(/turf/Start)
 		//CHANGE THIS FOR PLAYER SETUP
 		UpdatePlayerIMG()
+		usr.respawn = 200
 	..()
 
 //-----------------------------------------------------
@@ -343,6 +345,7 @@ mob/proc/LogoutPlayer()
 	F["tmpluk"] << usr.TMPLUK
 	F["AP"] << usr.RemainingAP
 	F["SP"] << usr.RemainingSP
+	F["respawn"] << usr.respawn
 
 //-----------------------------------------------------
 					//UPDATE PLAYER IMG VERBS//

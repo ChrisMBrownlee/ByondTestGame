@@ -101,7 +101,7 @@ mob/NPC/Monster
 			ALIGN = "Neutral"
 			DropCorpse = 0
 			ATKSPD = 10
-			MOVSPD = 20
+			MOVSPD = 25
 			CA = 1
 			respawn = 350
 
@@ -124,7 +124,7 @@ mob/NPC/Monster
 			ALIGN = "Neutral"
 			DropCorpse = 0
 			ATKSPD = 10
-			MOVSPD = 20
+			MOVSPD = 25
 			CA = 1
 			respawn = 350
 
@@ -147,7 +147,7 @@ mob/NPC/Monster
 			ALIGN = "Neutral"
 			DropCorpse = 0
 			ATKSPD = 5
-			MOVSPD = 10
+			MOVSPD = 25
 			CA = 1
 			respawn = 350
 
