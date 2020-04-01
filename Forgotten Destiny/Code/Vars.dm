@@ -61,6 +61,9 @@ mob/var
 	Status = "usr"
 //LISTS
 	list/killlist[5]// = new /list(1)
+//START LOCATIONS
+	SpawnLoc
+	RespawnTime = 200
 
 //-----------------------------------------------------
 					//OBJECT VARIABLES//

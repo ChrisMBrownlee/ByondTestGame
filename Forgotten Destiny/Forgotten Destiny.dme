@@ -25,6 +25,7 @@
 // BEGIN_INCLUDE
 #include "Aesthetics\byond.dmf"
 #include "Code\Admin.dm"
+#include "Code\Atoms.dm"
 #include "Code\ExpValues.dm"
 #include "Code\Mobs.dm"
 #include "Code\Monsters.dm"
@@ -34,6 +35,6 @@
 #include "Code\Vars.dm"
 #include "Code\Verbs.dm"
 #include "Code\World.dm"
-#include "Maps\NewMapTest.dmm"
+#include "Maps\NewWorldMap.dmm"
 // END_INCLUDE
 

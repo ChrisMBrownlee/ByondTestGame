@@ -69,6 +69,7 @@ mob/verb/Attack()
 	for(var/mob/M as mob in X)
 		if(M.CA == 1)
 			DoAttack()
+	del(K)
 
 mob/proc/DoAttack()
 	if(usr.attacking == 0)

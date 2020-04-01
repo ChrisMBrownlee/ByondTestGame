@@ -5,6 +5,7 @@
 obj
 	layer = 1.5
 	var/equiplayer = 2.9
+	var/RespawnTime = 0
 
 //-----------------------------------------------------
 					//OBJ VERBS//

@@ -1,42 +1,16 @@
-atom
-	moveable
-		proc
-			StepOn(atom/moveable/A)
-				if(A == src) return 1
-				else return !(density & A.density)
-			StepOff(atom/moveable/A)
-				return 1
-			SteppedOn(atom/moveable/A)
-			SteppedOff(atom/moveable/A)
+atom/movable
+	var
+		respawn = 200
+		turf/startloc
 
-turf
-	Enter(atom/moveable/A)
-		if((density | loc.density) & A.density) return 0
-		else
-			for(var/atom/moveable/M in src)
-				if(M != A)
-					if(!M.StepOn(A))
-						return 0
-			return 1
-	Exit(atom/moveable/A)
-		for(var/atom/moveable/M in src)
-			if(M != A)
-				if(!M.StepOff(A))
-					return 0
-		return 1
-	Entered(atom/moveable/A)
-		..()
-		for(var/atom/moveable/M in src)
-			if(M != A)
-				M.SteppedOn(A)
-	Exited(atom/moveable/A)
-		..()
-		for(var/atom/moveable/M in src)
-			if(M != A)
-				M.SteppedOff(A)
+	New(loc)
+		..(loc) // default new stuff
+		startloc = loc // store the starting loc for use later
 
-mob/StepOn(var/mob/M)
-	if(ismob(M))
-		if(src.client && M.client)
-			return 1
-	return ..()
+	Del()
+		if(startloc) Remake(src.type, src.startloc, src.respawn)
+		..() // default del stuff
+
+proc/Remake(atom_type, loc, delay)
+	if(loc) // if we know where it started
+		if(delay != -1) spawn(delay) new atom_type(loc)

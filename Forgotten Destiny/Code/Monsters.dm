@@ -50,6 +50,8 @@ mob/NPC/Monster
 			ATKSPD = 0
 			MOVSPD = 0
 			CA = 1
+			SpawnLoc;
+			respawn = 100
 
 //-----------------------------------------------------
 				//Training Dummy East//
@@ -72,6 +74,8 @@ mob/NPC/Monster
 			ATKSPD = 0
 			MOVSPD = 0
 			CA = 1
+			SpawnLoc;
+			respawn = 100
 
 
 //-----------------------------------------------------
@@ -101,6 +105,8 @@ mob/NPC/Monster
 			ATKSPD = 10
 			MOVSPD = 20
 			CA = 1
+			SpawnLoc;
+			respawn = 350
 
 //-----------------------------------------------------
 					//RED SLIME//
@@ -123,6 +129,8 @@ mob/NPC/Monster
 			ATKSPD = 10
 			MOVSPD = 20
 			CA = 1
+			SpawnLoc;
+			respawn = 350
 
 //-----------------------------------------------------
 					//Green SLIME//
@@ -145,6 +153,8 @@ mob/NPC/Monster
 			ATKSPD = 5
 			MOVSPD = 10
 			CA = 1
+			SpawnLoc;
+			respawn = 350
 
 //-----------------------------------------------------
 					//NEW MONSTER//
